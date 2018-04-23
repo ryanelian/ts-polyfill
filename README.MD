@@ -1,6 +1,6 @@
 # TS-Polyfill
 
-> Importable runtime polyfills for TypeScript libs, powered by core-js! :battery:
+> Importable runtime polyfills for TypeScript libs, powered by [core-js](https://github.com/zloirock/core-js)! :battery:
 
 ## Install
 
@@ -45,7 +45,9 @@ import 'ts-polyfill/lib/es2017-typed-arrays';
 import 'ts-polyfill/lib/es2017-promise';
 ```
 
-> Obviously, you don't need to use them all...
+- Obviously, you don't need to use them all...
+
+> Shameless self-promotion: use [instapack](https://github.com/ryanelian/instapack) for easy, rapid, and painless web app development using TypeScript!
 
 ## Alternative Techniques
 
@@ -63,8 +65,8 @@ import 'ts-polyfill';
 
 ## Caveats
 
-- ES2015 [String.prototype.normalize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize) polyfill is **gigantic** (140 kb) and is not included in `es2015-core`
+- `es2015.core` [String.prototype.normalize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize) polyfill is **gigantic** (140 kb) and is not included.
 
     - If you REALLY need it, use polyfill provided by [unorm](https://github.com/walling/unorm) library.
 
-- ES2015 [Object.getOwnPropertySymbols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols) polyfill is missing because `es2015.symbol` and `es2015.symbol.wellknown` libs polyfills are not implemented.
+- `es2015.core` [Object.getOwnPropertySymbols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols) polyfill is missing because `es2015.symbol` and `es2015.symbol.wellknown` libs polyfills are not implemented.
