@@ -19,15 +19,17 @@
     "lib": [
       "dom",
       "es5",
+      
       "es2015.core",
       "es2015.promise",
+      "es2016.array.include",
+      "es2017.string",
+      "es2018.promise",
+      
       "es2015.collection",
       "es2015.reflect",
-      "es2016.array.include",
       "es2017.object",
-      "es2017.string",
-      "es2017.typedarrays",
-      "es2018.promise"
+      "es2017.typedarrays"
     ]
   }
 }
@@ -36,15 +38,18 @@
 - In your app's entry point, import the polyfills:
 
 ```ts
+// very useful, recommended!
 import 'ts-polyfill/lib/es2015-core';
 import 'ts-polyfill/lib/es2015-promise';
+import 'ts-polyfill/lib/es2016-array-include';
+import 'ts-polyfill/lib/es2017-string';
+import 'ts-polyfill/lib/es2018-promise';
+
+// can be useful for certain types of app...
 import 'ts-polyfill/lib/es2015-collection';
 import 'ts-polyfill/lib/es2015-reflect';
-import 'ts-polyfill/lib/es2016-array-include';
 import 'ts-polyfill/lib/es2017-object';
-import 'ts-polyfill/lib/es2017-string';
 import 'ts-polyfill/lib/es2017-typed-arrays';
-import 'ts-polyfill/lib/es2017-promise';
 ```
 
 - Obviously, you don't need to use them all...
