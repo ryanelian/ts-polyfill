@@ -2,15 +2,32 @@
   "name": "ts-polyfill",
   "version": "0.0.1",
   "description": "Importable runtime polyfills for TypeScript libs, powered by core-js!",
+  "keywords": [
+    "typescript",
+    "javascript",
+    "polyfill",
+    "standard-library",
+    "promise",
+    "es6",
+    "es2015"
+  ],
+  "homepage": "https://github.com/ryanelian/ts-polyfill#readme",
+  "bugs": {
+    "url": "https://github.com/ryanelian/ts-polyfill/issues",
+    "email": "ryan.elian@accelist.com"
+  },
+  "license": "Unlicense",
+  "author": {
+    "name": "Ryan Elian",
+    "email": "ryan.elian@accelist.com",
+    "url": "https://elian.plus"
+  },
   "main": "dist/all.js",
   "module": "lib/index.js",
-  "repository": "https://github.com/ryanelian/ts-polyfill",
-  "bugs": {
-    "url": "https://github.com/ryanelian/ts-polyfill/issues"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanelian/ts-polyfill.git"
   },
-  "homepage": "https://github.com/ryanelian/ts-polyfill#readme",
-  "author": "Ryan Elian",
-  "license": "MIT",
   "scripts": {
     "build": "tsc && webpack && webpack --config webpack.config.min.js"
   },
