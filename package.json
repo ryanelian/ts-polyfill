@@ -1,0 +1,26 @@
+{
+  "name": "ts-polyfill",
+  "version": "0.0.1",
+  "description": "Importable runtime polyfills for TypeScript libs, powered by core-js!",
+  "main": "dist/all.js",
+  "module": "lib/index.js",
+  "repository": "https://github.com/ryanelian/ts-polyfill",
+  "bugs": {
+    "url": "https://github.com/ryanelian/ts-polyfill/issues"
+  },
+  "homepage": "https://github.com/ryanelian/ts-polyfill#readme",
+  "author": "Ryan Elian",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc && webpack && webpack --config webpack.config.min.js"
+  },
+  "dependencies": {
+    "core-js": "^2.5.5"
+  },
+  "devDependencies": {
+    "ts-loader": "^4.2.0",
+    "typescript": "^2.8.3",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
+  }
+}
