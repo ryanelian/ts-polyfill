@@ -1,6 +1,6 @@
 {
   "name": "ts-polyfill",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Runtime polyfills for TypeScript libs, powered by core-js!",
   "keywords": [
     "typescript",
@@ -22,22 +22,24 @@
     "email": "ryan.elian@accelist.com",
     "url": "https://elian.plus"
   },
-  "main": "dist/all.js",
-  "module": "lib/index.js",
+  "main": "lib/index.js",
+  "browser": "dist/ts-polyfill.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ryanelian/ts-polyfill.git"
   },
   "scripts": {
-    "build": "tsc && webpack && webpack --config webpack.config.min.js"
+    "build": "tsc && rollup -c && rollup -c rollup.config.min.js"
   },
   "dependencies": {
     "core-js": "^2.5.5"
   },
   "devDependencies": {
-    "ts-loader": "^4.2.0",
+    "rollup": "^0.58.2",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify": "^3.0.0",
     "typescript": "^2.8.3",
-    "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.15"
+    "uglify-js": "^3.3.22"
   }
 }
