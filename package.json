@@ -1,15 +1,15 @@
 {
   "name": "ts-polyfill",
   "version": "0.0.2",
-  "description": "Importable runtime polyfills for TypeScript libs, powered by core-js!",
+  "description": "Runtime polyfills for TypeScript libs, powered by core-js!",
   "keywords": [
     "typescript",
     "javascript",
     "polyfill",
     "standard-library",
-    "promise",
     "es6",
-    "es2015"
+    "es2015",
+    "promise"
   ],
   "homepage": "https://github.com/ryanelian/ts-polyfill#readme",
   "bugs": {

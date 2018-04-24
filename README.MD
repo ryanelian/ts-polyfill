@@ -1,6 +1,6 @@
 # TS-Polyfill
 
-> Importable runtime polyfills for TypeScript libs, powered by [core-js](https://github.com/zloirock/core-js)! :battery:
+> Runtime polyfills for TypeScript libs, powered by [core-js](https://github.com/zloirock/core-js)! :battery:
 
 [![npm](https://img.shields.io/npm/v/ts-polyfill.svg)](https://www.npmjs.com/package/ts-polyfill) [![Build Status](https://api.travis-ci.org/ryanelian/ts-polyfill.svg?branch=master)](https://travis-ci.org/ryanelian/ts-polyfill)
 
@@ -58,17 +58,17 @@ import 'ts-polyfill/lib/es2017-typed-arrays';
 
 ## Alternative Techniques
 
-- Download then include these as `<script>` in your HTML:
-
-    - [ts-polyfill.min.js](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js) (59.3 kB, 18.5 kB GZIP)
-
-    - [ts-polyfill.min.js.map](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js.map) 
-
 - Include everything implicitly:
 
 ```ts
 import 'ts-polyfill';
 ```
+
+- Include everything using a pre-built script: download then include these as `<script>` in your HTML (before your app script):
+
+  - [ts-polyfill.min.js](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js) (59.3 kB, 18.5 kB GZIP)
+
+  - [ts-polyfill.min.js.map](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js.map) 
 
 ## Caveats
 
