@@ -326,26 +326,6 @@ import 'core-js/fn/parse-float';
 
 import 'core-js/fn/parse-int';
 
-// interface Object {
-//     /**
-//      * Determines whether an object has a property with the specified name.
-//      * @param v A property name.
-//      */
-//     hasOwnProperty(v: PropertyKey): boolean;
-
-// RYAN: Compatible in all browsers?
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
-
-//     /**
-//      * Determines whether a specified property is enumerable.
-//      * @param v A property name.
-//      */
-//     propertyIsEnumerable(v: PropertyKey): boolean;
-// }
-
-// RYAN: Compatible in all browsers?
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-
 // interface ObjectConstructor {
 //     /**
 //      * Copy the values of all of the enumerable own properties from one or more source objects to a
@@ -406,30 +386,6 @@ import 'core-js/fn/object/is';
 //     setPrototypeOf(o: any, proto: object | null): any;
 
 import 'core-js/fn/object/set-prototype-of';
-
-//     /**
-//      * Gets the own property descriptor of the specified object.
-//      * An own property descriptor is one that is defined directly on the object and is not
-//      * inherited from the object's prototype.
-//      * @param o Object that contains the property.
-//      * @param p Name of the property.
-//      */
-//     getOwnPropertyDescriptor(o: any, propertyKey: PropertyKey): PropertyDescriptor | undefined;
-
-import 'core-js/fn/object/get-own-property-descriptor';
-
-//     /**
-//      * Adds a property to an object, or modifies attributes of an existing property.
-//      * @param o Object on which to add or modify the property. This can be a native JavaScript
-//      * object (that is, a user-defined object or a built in object) or a DOM object.
-//      * @param p The property name.
-//      * @param attributes Descriptor for the property. It can be for a data property or an accessor
-//      *  property.
-//      */
-//     defineProperty(o: any, propertyKey: PropertyKey, attributes: PropertyDescriptor): any;
-// }
-
-import 'core-js/fn/object/define-property';
 
 // interface ReadonlyArray<T> {
 //     /**
