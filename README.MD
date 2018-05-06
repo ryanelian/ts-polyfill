@@ -82,9 +82,9 @@ import 'ts-polyfill';
 
 - We will update the polyfills whenever [the official TypeScript libs](https://github.com/Microsoft/TypeScript/tree/master/lib) change.
 
-- We will protect `ts-polyfill` consumers against changes in `core-js`: our API will probably never change, but `core-js` API may change. (`core-js` version 3 breaking changes coming soon...)
+- We will protect ts-polyfill consumers against breaking changes in core-js: our API will probably never change, but core-js API may change. (core-js version 3 coming soon...)
 
-- We reduce total polyfill size by targeting ES5. (TypeScript projects usually transpile down to `es5`, but `core-js` polyfills `es3`)
+- We reduce total polyfill size by targeting ES5. (TypeScript projects usually transpile down to ES5, but core-js polyfills ES3)
 
 ### What's the catch?
 
