@@ -1344,34 +1344,6 @@ var tsPolyfill = (function () {
 
 	var setPrototypeOf = _core.Object.setPrototypeOf;
 
-	// most Object methods by ES6 should accept primitives
-
-
-
-	var _objectSap = function (KEY, exec) {
-	  var fn = (_core.Object || {})[KEY] || Object[KEY];
-	  var exp = {};
-	  exp[KEY] = exec(fn);
-	  _export(_export.S + _export.F * _fails(function () { fn(1); }), 'Object', exp);
-	};
-
-	// 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
-
-	var $getOwnPropertyDescriptor = _objectGopd.f;
-
-	_objectSap('getOwnPropertyDescriptor', function () {
-	  return function getOwnPropertyDescriptor(it, key) {
-	    return $getOwnPropertyDescriptor(_toIobject(it), key);
-	  };
-	});
-
-	var $Object = _core.Object;
-
-	// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-	_export(_export.S + _export.F * !_descriptors, 'Object', { defineProperty: _objectDp.f });
-
-	var $Object$1 = _core.Object;
-
 	// 21.2.5.3 get RegExp.prototype.flags
 
 	var _flags = function () {
