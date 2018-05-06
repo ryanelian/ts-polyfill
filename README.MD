@@ -35,7 +35,7 @@
 }
 ```
 
-- In your app's entry point, import the polyfills:
+- In your app's entry point, import the polyfills: (Obviously, you don't need to use them all...)
 
 ```ts
 // very useful, recommended!
@@ -45,20 +45,18 @@ import 'ts-polyfill/lib/es2016-array-include';
 import 'ts-polyfill/lib/es2017-string';
 import 'ts-polyfill/lib/es2018-promise';
 
-// can be useful for certain types of app...
+// can be useful for certain apps...
 import 'ts-polyfill/lib/es2015-collection';
 import 'ts-polyfill/lib/es2015-reflect';
 import 'ts-polyfill/lib/es2017-object';
 import 'ts-polyfill/lib/es2017-typed-arrays';
 ```
 
-- Obviously, you don't need to use them all...
-
 > Shameless self-promotion: use [instapack](https://github.com/ryanelian/instapack) for easy, rapid, and painless web app development using TypeScript!
 
 ## Alternative Techniques
 
-- Include everything implicitly:
+- Include everything implicitly: :ok_hand:
 
 ```ts
 import 'ts-polyfill';
@@ -70,10 +68,30 @@ import 'ts-polyfill';
 
   - [ts-polyfill.min.js.map](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js.map) 
 
-## Caveats
+## FAQ
+
+### Why not just use core-js directly?
+
+- We made extra efforts to guarantee (near) 100% coverage for polyfills of corresponding libs [by sweeping TypeScript libs API one-by-one](https://github.com/ryanelian/ts-polyfill/blob/master/src/es2015-core.ts).
+
+- We don't include lib polyfills which we consider to be 'unstable'
+
+  - **Example 1:** [Almost half of `Symbol` features cannot be polyfilled.](http://kangax.github.io/compat-table/es6) Including this lib just because partial polyfill exists for it would be misleading and dangerous for the developer!
+
+  - **Example 2:** `esnext.feature` libs are probably unstable. We will wait for them to be marked as something like `es2018.feature` before attempting to polyfill them.
+
+- We will update the polyfills whenever [the official TypeScript libs](https://github.com/Microsoft/TypeScript/tree/master/lib) change.
+
+- We will protect `ts-polyfill` consumers against changes in `core-js`: our API will probably never change, but `core-js` API may change. (`core-js` version 3 breaking changes coming soon...)
+
+- We reduce total polyfill size by targeting ES5. (TypeScript projects usually transpile down to `es5`, but `core-js` polyfills `es3`)
+
+### What's the catch?
 
 - `es2015.core` [String.prototype.normalize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize) polyfill is **gigantic** (140 kb) and is not included.
 
     - If you REALLY need it, use polyfill provided by [unorm](https://github.com/walling/unorm) library.
 
 - `es2015.core` [Object.getOwnPropertySymbols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols) polyfill is missing because `es2015.symbol` and `es2015.symbol.wellknown` libs polyfills are not implemented.
+
+- `es2015.reflect` method `Reflect.construct` cannot: [sets new.target meta-property, Array subclassing, RegExp subclassing, Function subclassing](http://kangax.github.io/compat-table/es6/#test-Reflect).
