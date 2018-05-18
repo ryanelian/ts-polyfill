@@ -72,11 +72,11 @@ import 'ts-polyfill';
 
 ### What's up with the semver?
 
-Above version 0.0.4 (last known with TypeScript 2.8.3), we follow TypeScript version. That means: ts-polyfill 2.9.0 is compatible with TypeScript 2.9.0 libs, and so on!
+Above version 0.0.4 (last known compatibility with TypeScript 2.8.3), we follow TypeScript version. Which means: ts-polyfill 2.9.0 is compatible with TypeScript 2.9.0 libs, and so on!
 
 **Release Cadence:** We will release new version if necessary whenever new TypeScript versions are published.
 
-### Why not just use core-js directly?
+### Why can't I just use core-js directly?
 
 - We made extra efforts to guarantee (near) 100% coverage for polyfills of corresponding libs [by sweeping TypeScript libs API one-by-one](https://github.com/ryanelian/ts-polyfill/blob/master/src/es2015-core.ts).
 
@@ -86,7 +86,7 @@ Above version 0.0.4 (last known with TypeScript 2.8.3), we follow TypeScript ver
 
   - **Example 2:** `esnext.feature` libs are probably unstable. We will wait for them to be marked as something like `es2018.feature` before attempting to polyfill them.
 
-- We will update the polyfills whenever [the official TypeScript libs](https://github.com/Microsoft/TypeScript/tree/master/lib) change.
+- We will update the polyfills whenever [the official TypeScript libs](https://github.com/Microsoft/TypeScript/tree/master/lib) change. (It happens)
 
 - We will protect ts-polyfill consumers against breaking changes in core-js: our API will probably never change, but core-js API may change. (core-js version 3 coming soon...)
 
