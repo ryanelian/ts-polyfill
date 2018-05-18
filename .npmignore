@@ -1,0 +1,8 @@
+official-lib-declarations/
+src/
+.travis.yml
+build.ps1
+rollup.config.js
+rollup.config.min.js
+tsconfig.json
+yarn.lock
