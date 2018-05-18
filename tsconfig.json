@@ -3,7 +3,7 @@
     "noImplicitAny": false,
     "noImplicitThis": true,
     "alwaysStrict": true,
-    "strictNullChecks": false,
+    "strictNullChecks": true,
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
     "skipLibCheck": true,
