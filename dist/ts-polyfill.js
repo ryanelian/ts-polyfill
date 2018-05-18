@@ -19,7 +19,7 @@ var tsPolyfill = (function () {
 	});
 
 	var _core = createCommonjsModule(function (module) {
-	var core = module.exports = { version: '2.5.5' };
+	var core = module.exports = { version: '2.5.6' };
 	if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 	});
 	var _core_1 = _core.version;
@@ -256,11 +256,20 @@ var tsPolyfill = (function () {
 	  return _cof(arg) == 'Array';
 	};
 
+	var _library = false;
+
+	var _shared = createCommonjsModule(function (module) {
 	var SHARED = '__core-js_shared__';
 	var store = _global[SHARED] || (_global[SHARED] = {});
-	var _shared = function (key) {
-	  return store[key] || (store[key] = {});
-	};
+
+	(module.exports = function (key, value) {
+	  return store[key] || (store[key] = value !== undefined ? value : {});
+	})('versions', []).push({
+	  version: _core.version,
+	  mode: 'global',
+	  copyright: '© 2018 Denis Pushkarev (zloirock.ru)'
+	});
+	});
 
 	var _wks = createCommonjsModule(function (module) {
 	var store = _shared('wks');
@@ -456,8 +465,6 @@ var tsPolyfill = (function () {
 	  };
 	};
 
-	var _library = false;
-
 	var _iterators = {};
 
 	// to indexed object, toObject with fallback for non-array-like ES3 strings
@@ -646,7 +653,7 @@ var tsPolyfill = (function () {
 	      // Set @@toStringTag to native iterators
 	      _setToStringTag(IteratorPrototype, TAG, true);
 	      // fix for some old engines
-	      if (!_library && typeof IteratorPrototype[ITERATOR] != 'function') _hide(IteratorPrototype, ITERATOR, returnThis);
+	      if (typeof IteratorPrototype[ITERATOR] != 'function') _hide(IteratorPrototype, ITERATOR, returnThis);
 	    }
 	  }
 	  // fix Array#{values, @@iterator}.name in V8 / FF
@@ -655,7 +662,7 @@ var tsPolyfill = (function () {
 	    $default = function values() { return $native.call(this); };
 	  }
 	  // Define iterator
-	  if ((!_library || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
+	  if (BUGGY || VALUES_BUG || !proto[ITERATOR]) {
 	    _hide(proto, ITERATOR, $default);
 	  }
 	  // Plug for library
@@ -1990,7 +1997,8 @@ var tsPolyfill = (function () {
 	    };
 	  // environments with maybe non-completely correct, but existent Promise
 	  } else if (Promise && Promise.resolve) {
-	    var promise = Promise.resolve();
+	    // Promise.resolve without an argument throws an error in LG WebOS 2
+	    var promise = Promise.resolve(undefined);
 	    notify = function () {
 	      promise.then(flush);
 	    };
@@ -2047,6 +2055,10 @@ var tsPolyfill = (function () {
 	  }
 	};
 
+	var navigator = _global.navigator;
+
+	var _userAgent = navigator && navigator.userAgent || '';
+
 	var _promiseResolve = function (C, x) {
 	  _anObject(C);
 	  if (_isObject(x) && x.constructor === C) return x;
@@ -2066,9 +2078,12 @@ var tsPolyfill = (function () {
 
 
 
+
 	var PROMISE = 'Promise';
 	var TypeError$1 = _global.TypeError;
 	var process$2 = _global.process;
+	var versions = process$2 && process$2.versions;
+	var v8 = versions && versions.v8 || '';
 	var $Promise = _global[PROMISE];
 	var isNode$1 = _classof(process$2) == 'process';
 	var empty = function () { /* empty */ };
@@ -2083,7 +2098,13 @@ var tsPolyfill = (function () {
 	      exec(empty, empty);
 	    };
 	    // unhandled rejections tracking support, NodeJS Promise without it fails @@species test
-	    return (isNode$1 || typeof PromiseRejectionEvent == 'function') && promise.then(empty) instanceof FakePromise;
+	    return (isNode$1 || typeof PromiseRejectionEvent == 'function')
+	      && promise.then(empty) instanceof FakePromise
+	      // v8 6.6 (Node 10 and Chrome 66) have a bug with resolving custom thenables
+	      // https://bugs.chromium.org/p/chromium/issues/detail?id=830565
+	      // we can't detect it synchronously, so just check versions
+	      && v8.indexOf('6.6') !== 0
+	      && _userAgent.indexOf('Chrome/66') === -1;
 	  } catch (e) { /* empty */ }
 	}();
 
@@ -2277,7 +2298,7 @@ var tsPolyfill = (function () {
 	    return capability.promise;
 	  }
 	});
-	_export(_export.S + _export.F * (_library || !USE_NATIVE), PROMISE, {
+	_export(_export.S + _export.F * (!USE_NATIVE), PROMISE, {
 	  // 25.4.4.6 Promise.resolve(x)
 	  resolve: function resolve(x) {
 	    return _promiseResolve(_library && this === Wrapper ? $Promise : this, x);
@@ -3230,10 +3251,6 @@ var tsPolyfill = (function () {
 	  return left ? stringFiller + S : S + stringFiller;
 	};
 
-	var navigator = _global.navigator;
-
-	var _userAgent = navigator && navigator.userAgent || '';
-
 	// https://github.com/tc39/proposal-string-pad-start-end
 
 
@@ -3560,7 +3577,7 @@ var tsPolyfill = (function () {
 	    for (var keys = gOPN(BaseBuffer), j = 0, key; keys.length > j;) {
 	      if (!((key = keys[j++]) in $ArrayBuffer)) _hide($ArrayBuffer, key, BaseBuffer[key]);
 	    }
-	    if (!_library) ArrayBufferProto.constructor = $ArrayBuffer;
+	    ArrayBufferProto.constructor = $ArrayBuffer;
 	  }
 	  // iOS Safari 7.x bug
 	  var view = new $DataView(new $ArrayBuffer(2));
@@ -3628,7 +3645,6 @@ var tsPolyfill = (function () {
 
 	var _typedArray = createCommonjsModule(function (module) {
 	if (_descriptors) {
-	  var LIBRARY = _library;
 	  var global = _global;
 	  var fails = _fails;
 	  var $export = _export;
@@ -4050,7 +4066,7 @@ var tsPolyfill = (function () {
 	        if (!(key in TypedArray)) hide(TypedArray, key, Base[key]);
 	      });
 	      TypedArray[PROTOTYPE] = TypedArrayPrototype;
-	      if (!LIBRARY) TypedArrayPrototype.constructor = TypedArray;
+	      TypedArrayPrototype.constructor = TypedArray;
 	    }
 	    var $nativeIterator = TypedArrayPrototype[ITERATOR];
 	    var CORRECT_ITER_NAME = !!$nativeIterator
@@ -4090,7 +4106,7 @@ var tsPolyfill = (function () {
 
 	    $export($export.P + $export.F * !CORRECT_ITER_NAME, NAME, $iterators);
 
-	    if (!LIBRARY && TypedArrayPrototype.toString != arrayToString) TypedArrayPrototype.toString = arrayToString;
+	    if (TypedArrayPrototype.toString != arrayToString) TypedArrayPrototype.toString = arrayToString;
 
 	    $export($export.P + $export.F * fails(function () {
 	      new TypedArray(1).slice();
@@ -4103,7 +4119,7 @@ var tsPolyfill = (function () {
 	    })), NAME, { toLocaleString: $toLocaleString });
 
 	    Iterators[NAME] = CORRECT_ITER_NAME ? $nativeIterator : $iterator;
-	    if (!LIBRARY && !CORRECT_ITER_NAME) hide(TypedArrayPrototype, ITERATOR, $iterator);
+	    if (!CORRECT_ITER_NAME) hide(TypedArrayPrototype, ITERATOR, $iterator);
 	  };
 	} else module.exports = function () { /* empty */ };
 	});
