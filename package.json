@@ -1,6 +1,6 @@
 {
   "name": "ts-polyfill",
-  "version": "0.0.4",
+  "version": "2.9.0",
   "description": "Runtime polyfills for TypeScript libs, powered by core-js!",
   "keywords": [
     "typescript",

@@ -70,6 +70,12 @@ import 'ts-polyfill';
 
 ## FAQ
 
+### What's up with the semver?
+
+Above version 0.0.4 (last known with TypeScript 2.8.3), we follow TypeScript version. That means: ts-polyfill 2.9.0 is compatible with TypeScript 2.9.0 libs, and so on!
+
+**Release Cadence:** We will release new version if necessary whenever new TypeScript versions are published.
+
 ### Why not just use core-js directly?
 
 - We made extra efforts to guarantee (near) 100% coverage for polyfills of corresponding libs [by sweeping TypeScript libs API one-by-one](https://github.com/ryanelian/ts-polyfill/blob/master/src/es2015-core.ts).
