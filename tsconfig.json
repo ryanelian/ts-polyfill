@@ -40,7 +40,9 @@
     ]
   },
   "exclude": [
+    "dist",
     "lib",
+    "official-lib-declarations",
     "node_modules"
   ]
 }
