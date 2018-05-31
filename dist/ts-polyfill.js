@@ -3626,12 +3626,12 @@ var tsPolyfill = (function () {
 	    if ($slice !== undefined && end === undefined) return $slice.call(_anObject(this), start); // FF fix
 	    var len = _anObject(this).byteLength;
 	    var first = _toAbsoluteIndex(start, len);
-	    var final = _toAbsoluteIndex(end === undefined ? len : end, len);
-	    var result = new (_speciesConstructor(this, $ArrayBuffer))(_toLength(final - first));
+	    var fin = _toAbsoluteIndex(end === undefined ? len : end, len);
+	    var result = new (_speciesConstructor(this, $ArrayBuffer))(_toLength(fin - first));
 	    var viewS = new $DataView(this);
 	    var viewT = new $DataView(result);
 	    var index = 0;
-	    while (first < final) {
+	    while (first < fin) {
 	      viewT.setUint8(index++, viewS.getUint8(first++));
 	    } return result;
 	  }
