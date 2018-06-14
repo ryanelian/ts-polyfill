@@ -2,6 +2,12 @@
 
 This document will be used to track TypeScript lib changes inbetween versions, for libs relevant to ts-polyfill.
 
+### 2.9.2
+
+https://github.com/Microsoft/TypeScript/releases/tag/v2.9.2
+
+> No changes.
+
 ### 2.9.1
 
 https://github.com/Microsoft/TypeScript/releases/tag/v2.9.1
