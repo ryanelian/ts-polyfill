@@ -2,6 +2,12 @@
 
 This document will be used to track TypeScript lib changes inbetween versions, for libs relevant to ts-polyfill.
 
+### 3.0.0
+
+https://github.com/Microsoft/TypeScript/releases/tag/v3.0.0
+
+> No changes, but interesting: the root `lib.d.ts` now references other libs instead of having duped content.
+
 ### 2.9.2
 
 https://github.com/Microsoft/TypeScript/releases/tag/v2.9.2
