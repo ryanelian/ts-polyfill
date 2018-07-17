@@ -22,13 +22,13 @@
       
       "es2015.core",
       "es2015.promise",
+      "es2015.collection",
       "es2016.array.include",
       "es2017.string",
+      "es2017.object",
       "es2018.promise",
       
-      "es2015.collection",
       "es2015.reflect",
-      "es2017.object",
       "es2017.typedarrays"
     ]
   }
@@ -41,14 +41,14 @@
 // very useful, recommended!
 import 'ts-polyfill/lib/es2015-core';
 import 'ts-polyfill/lib/es2015-promise';
+import 'ts-polyfill/lib/es2015-collection';
 import 'ts-polyfill/lib/es2016-array-include';
 import 'ts-polyfill/lib/es2017-string';
+import 'ts-polyfill/lib/es2017-object';
 import 'ts-polyfill/lib/es2018-promise';
 
 // can be useful for certain apps...
-import 'ts-polyfill/lib/es2015-collection';
 import 'ts-polyfill/lib/es2015-reflect';
-import 'ts-polyfill/lib/es2017-object';
 import 'ts-polyfill/lib/es2017-typed-arrays';
 ```
 
@@ -76,7 +76,7 @@ Above version 0.0.4 (last known compatibility with TypeScript 2.8.3), we follow 
 
 **Release Cadence:** We will release new version if necessary whenever new TypeScript versions are published.
 
-### Why can't I just use core-js directly?
+### Why shouldn't I just use core-js directly?
 
 - We made extra efforts to guarantee (near) 100% coverage for polyfills of corresponding libs [by sweeping TypeScript libs API one-by-one](https://github.com/ryanelian/ts-polyfill/blob/master/src/es2015-core.ts).
 
