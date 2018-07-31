@@ -806,7 +806,7 @@ var tsPolyfill = (function () {
 	  }
 	});
 
-	var from = _core.Array.from;
+	var from_1 = _core.Array.from;
 
 	// WebKit Array.of isn't generic
 	_export(_export.S + _export.F * _fails(function () {
