@@ -2,6 +2,12 @@
 
 This document will be used to track TypeScript lib changes inbetween versions, for libs relevant to ts-polyfill.
 
+### 3.0.3
+
+https://github.com/Microsoft/TypeScript/releases/tag/v3.0.3
+
+> No changes, [but suddenly `es2017.string` lib is not valid in `tsconfig.json`](https://github.com/Microsoft/TypeScript/issues/26827). (But no error if lib is included. Builds will fail if using `padStart` or `padEnd` methods but lib is not included!)
+
 ### 3.0.1
 
 https://github.com/Microsoft/TypeScript/releases/tag/v3.0.1
