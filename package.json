@@ -1,6 +1,6 @@
 {
   "name": "ts-polyfill",
-  "version": "3.0.3",
+  "version": "3.1.1",
   "description": "Runtime polyfills for TypeScript libs, powered by core-js!",
   "keywords": [
     "typescript",
@@ -34,11 +34,11 @@
     "core-js": "^2.5.7"
   },
   "devDependencies": {
-    "rollup": "^0.65.0",
-    "rollup-plugin-commonjs": "^9.1.6",
-    "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-uglify": "^5.0.2",
-    "typescript": "^3.0.3",
+    "rollup": "^0.66.2",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-uglify": "^6.0.0",
+    "typescript": "^3.1.1",
     "uglify-js": "^3.4.9"
   }
 }
