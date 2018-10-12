@@ -2,13 +2,19 @@
 
 This document will be used to track TypeScript lib changes inbetween versions, for libs relevant to ts-polyfill.
 
+### 3.1.3
+
+https://github.com/Microsoft/TypeScript/releases/tag/v3.1.3
+
+> No changes. Also applies to [3.1.2](https://github.com/Microsoft/TypeScript/releases/tag/v3.1.2)
+
 ### 3.1.1
 
 https://github.com/Microsoft/TypeScript/releases/tag/v3.1.1
 
-> Bundled polyfill is identical to the 3.0.3, so no new release for now. 
+> Bundled polyfill is identical to the 3.0.3, so no new release / won't publish for now. 
 
-> Minor changes to comment and the `es2017.string` lib regression in 3.0.3 was fixed.
+> Minor changes to comments and the `es2017.string` lib regression in 3.0.3 was fixed.
 
 ### 3.0.3
 
