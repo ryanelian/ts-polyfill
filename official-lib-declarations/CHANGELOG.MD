@@ -2,6 +2,18 @@
 
 This document will be used to track TypeScript lib changes inbetween versions, for libs relevant to ts-polyfill.
 
+### 3.2.1
+
+https://github.com/Microsoft/TypeScript/releases/tag/v3.2.1
+
+- Minor changes in `MapConstructor` interface. Should affect nothing...
+
+### 3.1.6
+
+https://github.com/Microsoft/TypeScript/releases/tag/v3.1.6
+
+> No changes. Also applies to [3.1.4](https://github.com/Microsoft/TypeScript/releases/tag/v3.1.4) and [3.1.5](https://github.com/Microsoft/TypeScript/releases/tag/v3.1.5).
+
 ### 3.1.3
 
 https://github.com/Microsoft/TypeScript/releases/tag/v3.1.3
