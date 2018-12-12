@@ -2,6 +2,12 @@
 
 This document will be used to track TypeScript lib changes inbetween versions, for libs relevant to ts-polyfill.
 
+### 3.2.2
+
+https://github.com/Microsoft/TypeScript/releases/tag/v3.2.1
+
+- No changes in TypeScript declarations. core-js was updated but did not affect bundle.
+
 ### 3.2.1
 
 https://github.com/Microsoft/TypeScript/releases/tag/v3.2.1
