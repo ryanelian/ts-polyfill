@@ -19,7 +19,7 @@ var tsPolyfill = (function () {
 	});
 
 	var _core = createCommonjsModule(function (module) {
-	var core = module.exports = { version: '2.6.0' };
+	var core = module.exports = { version: '2.6.5' };
 	if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 	});
 	var _core_1 = _core.version;
@@ -115,14 +115,31 @@ var tsPolyfill = (function () {
 	  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
 	};
 
+	var _library = false;
+
+	var _shared = createCommonjsModule(function (module) {
+	var SHARED = '__core-js_shared__';
+	var store = _global[SHARED] || (_global[SHARED] = {});
+
+	(module.exports = function (key, value) {
+	  return store[key] || (store[key] = value !== undefined ? value : {});
+	})('versions', []).push({
+	  version: _core.version,
+	  mode: 'global',
+	  copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
+	});
+	});
+
+	var _functionToString = _shared('native-function-to-string', Function.toString);
+
 	var _redefine = createCommonjsModule(function (module) {
 	var SRC = _uid('src');
+
 	var TO_STRING = 'toString';
-	var $toString = Function[TO_STRING];
-	var TPL = ('' + $toString).split(TO_STRING);
+	var TPL = ('' + _functionToString).split(TO_STRING);
 
 	_core.inspectSource = function (it) {
-	  return $toString.call(it);
+	  return _functionToString.call(it);
 	};
 
 	(module.exports = function (O, key, val, safe) {
@@ -142,7 +159,7 @@ var tsPolyfill = (function () {
 	  }
 	// add fake Function#toString for correct work wrapped methods / constructors with methods like LoDash isNative
 	})(Function.prototype, TO_STRING, function toString() {
-	  return typeof this == 'function' && this[SRC] || $toString.call(this);
+	  return typeof this == 'function' && this[SRC] || _functionToString.call(this);
 	});
 	});
 
@@ -255,21 +272,6 @@ var tsPolyfill = (function () {
 	var _isArray = Array.isArray || function isArray(arg) {
 	  return _cof(arg) == 'Array';
 	};
-
-	var _library = false;
-
-	var _shared = createCommonjsModule(function (module) {
-	var SHARED = '__core-js_shared__';
-	var store = _global[SHARED] || (_global[SHARED] = {});
-
-	(module.exports = function (key, value) {
-	  return store[key] || (store[key] = value !== undefined ? value : {});
-	})('versions', []).push({
-	  version: _core.version,
-	  mode: 'global',
-	  copyright: '© 2018 Denis Pushkarev (zloirock.ru)'
-	});
-	});
 
 	var _wks = createCommonjsModule(function (module) {
 	var store = _shared('wks');
@@ -2743,6 +2745,7 @@ var tsPolyfill = (function () {
 	};
 
 	var es6_weakMap = createCommonjsModule(function (module) {
+
 	var each = _arrayMethods(0);
 
 
@@ -2750,12 +2753,12 @@ var tsPolyfill = (function () {
 
 
 
-
+	var NATIVE_WEAK_MAP = _validateCollection;
+	var IS_IE11 = !_global.ActiveXObject && 'ActiveXObject' in _global;
 	var WEAK_MAP = 'WeakMap';
 	var getWeak = _meta.getWeak;
 	var isExtensible = Object.isExtensible;
 	var uncaughtFrozenStore = _collectionWeak.ufstore;
-	var tmp = {};
 	var InternalMap;
 
 	var wrapper = function (get) {
@@ -2783,7 +2786,7 @@ var tsPolyfill = (function () {
 	var $WeakMap = module.exports = _collection(WEAK_MAP, wrapper, methods, _collectionWeak, true, true);
 
 	// IE11 WeakMap frozen keys fix
-	if (_fails(function () { return new $WeakMap().set((Object.freeze || Object)(tmp), 7).get(tmp) != 7; })) {
+	if (NATIVE_WEAK_MAP && IS_IE11) {
 	  InternalMap = _collectionWeak.getConstructor(wrapper, WEAK_MAP);
 	  _objectAssign(InternalMap.prototype, methods);
 	  _meta.NEED = true;
@@ -3257,7 +3260,9 @@ var tsPolyfill = (function () {
 
 
 	// https://github.com/zloirock/core-js/issues/280
-	_export(_export.P + _export.F * /Version\/10\.\d+(\.\d+)? Safari\//.test(_userAgent), 'String', {
+	var WEBKIT_BUG = /Version\/10\.\d+(\.\d+)?( Mobile\/\w+)? Safari\//.test(_userAgent);
+
+	_export(_export.P + _export.F * WEBKIT_BUG, 'String', {
 	  padStart: function padStart(maxLength /* , fillString = ' ' */) {
 	    return _stringPad(this, maxLength, arguments.length > 1 ? arguments[1] : undefined, true);
 	  }
@@ -3271,7 +3276,9 @@ var tsPolyfill = (function () {
 
 
 	// https://github.com/zloirock/core-js/issues/280
-	_export(_export.P + _export.F * /Version\/10\.\d+(\.\d+)? Safari\//.test(_userAgent), 'String', {
+	var WEBKIT_BUG$1 = /Version\/10\.\d+(\.\d+)?( Mobile\/\w+)? Safari\//.test(_userAgent);
+
+	_export(_export.P + _export.F * WEBKIT_BUG$1, 'String', {
 	  padEnd: function padEnd(maxLength /* , fillString = ' ' */) {
 	    return _stringPad(this, maxLength, arguments.length > 1 ? arguments[1] : undefined, false);
 	  }
@@ -3645,6 +3652,7 @@ var tsPolyfill = (function () {
 
 	var _typedArray = createCommonjsModule(function (module) {
 	if (_descriptors) {
+	  var LIBRARY = _library;
 	  var global = _global;
 	  var fails = _fails;
 	  var $export = _export;
@@ -4066,7 +4074,7 @@ var tsPolyfill = (function () {
 	        if (!(key in TypedArray)) hide(TypedArray, key, Base[key]);
 	      });
 	      TypedArray[PROTOTYPE] = TypedArrayPrototype;
-	      TypedArrayPrototype.constructor = TypedArray;
+	      if (!LIBRARY) TypedArrayPrototype.constructor = TypedArray;
 	    }
 	    var $nativeIterator = TypedArrayPrototype[ITERATOR];
 	    var CORRECT_ITER_NAME = !!$nativeIterator
@@ -4106,7 +4114,7 @@ var tsPolyfill = (function () {
 
 	    $export($export.P + $export.F * !CORRECT_ITER_NAME, NAME, $iterators);
 
-	    if (TypedArrayPrototype.toString != arrayToString) TypedArrayPrototype.toString = arrayToString;
+	    if (!LIBRARY && TypedArrayPrototype.toString != arrayToString) TypedArrayPrototype.toString = arrayToString;
 
 	    $export($export.P + $export.F * fails(function () {
 	      new TypedArray(1).slice();
@@ -4119,7 +4127,7 @@ var tsPolyfill = (function () {
 	    })), NAME, { toLocaleString: $toLocaleString });
 
 	    Iterators[NAME] = CORRECT_ITER_NAME ? $nativeIterator : $iterator;
-	    if (!CORRECT_ITER_NAME) hide(TypedArrayPrototype, ITERATOR, $iterator);
+	    if (!LIBRARY && !CORRECT_ITER_NAME) hide(TypedArrayPrototype, ITERATOR, $iterator);
 	  };
 	} else module.exports = function () { /* empty */ };
 	});
