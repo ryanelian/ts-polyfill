@@ -25,7 +25,7 @@
       "es2016.array.include",
       "es2017.object",
       "es2017.string",
-      "es2018.async-iterable",
+      "es2018.asynciterable",
       "es2018.promise",
       "es2019.array",
       "es2019.string",      
