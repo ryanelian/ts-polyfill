@@ -6,6 +6,8 @@ This document will be used to track TypeScript lib changes inbetween versions, f
 
 https://github.com/microsoft/TypeScript/releases/tag/v3.4.5
 
+- New libs are added: ES2019 Array, String, Symbol
+
 ### 3.3.3
 
 https://github.com/Microsoft/TypeScript/releases/tag/v3.3.1

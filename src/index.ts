@@ -11,3 +11,6 @@ import './es2017-string';
 import './es2017-typed-arrays';
 
 import './es2018-promise';
+
+import './es2019-array';
+import './es2019-string';

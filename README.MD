@@ -1,6 +1,6 @@
 # TS-Polyfill
 
-> Runtime polyfills for TypeScript libs, powered by [core-js](https://github.com/zloirock/core-js)! :battery:
+> Runtime polyfills for TypeScript libs, powered by [core-js](https://github.com/zloirock/core-js)! :battery: :ambulance:
 
 [![npm](https://img.shields.io/npm/v/ts-polyfill.svg)](https://www.npmjs.com/package/ts-polyfill) [![Build Status](https://api.travis-ci.org/ryanelian/ts-polyfill.svg?branch=master)](https://travis-ci.org/ryanelian/ts-polyfill)
 
@@ -10,53 +10,57 @@
 
 ## Getting Started
 
-- Modify your project `tsconfig.json`
+- Modify your project `tsconfig.json` to add type definitions required:
+
+  - *(Obviously, you don't need EVERYTHING. Pick the ones you actually need)*
 
 ```json
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2015",
     "lib": [
       "dom",
-      "es5",
-      
-      "es2015.core",
-      "es2015.promise",
-      "es2015.collection",
+      "dom.iterable",
+      "es2015",
       "es2016.array.include",
-      "es2017.string",
       "es2017.object",
+      "es2017.string",
+      "es2018.async-iterable",
       "es2018.promise",
-      
-      "es2015.reflect",
-      "es2017.typedarrays"
+      "es2019.array",
+      "es2019.string",      
+      "es2019.symbol"
     ]
   }
 }
 ```
 
-- In your app's entry point, import the polyfills: (Obviously, you don't need to use them all...)
+- In above example, we are targeting ES2015 so only ES2016+ polyfills are needed!
+
+  - **[It's 2019.](https://www.microsoft.com/en-us/windowsforbusiness/end-of-windows-7-support)** You should be targeting ES2015 or ES2016 if possible.
+
+  - The complete set of polyfills (including ES2015 for poor souls targeting ES5) can be found here: https://github.com/ryanelian/ts-polyfill/tree/master/lib
+
+- Then, in the entry point of your application, import the polyfills:
 
 ```ts
-// very useful, recommended!
-import 'ts-polyfill/lib/es2015-core';
-import 'ts-polyfill/lib/es2015-promise';
-import 'ts-polyfill/lib/es2015-collection';
 import 'ts-polyfill/lib/es2016-array-include';
-import 'ts-polyfill/lib/es2017-string';
 import 'ts-polyfill/lib/es2017-object';
+import 'ts-polyfill/lib/es2017-string';
+import 'ts-polyfill/lib/es2017-async-iterable';   // for-await-of
 import 'ts-polyfill/lib/es2018-promise';
-
-// can be useful for certain apps...
-import 'ts-polyfill/lib/es2015-reflect';
-import 'ts-polyfill/lib/es2017-typed-arrays';
+import 'ts-polyfill/lib/es2019-array';
+import 'ts-polyfill/lib/es2019-string';
+import 'ts-polyfill/lib/es2019-symbol';
 ```
 
-> Shameless self-promotion: use [instapack](https://github.com/ryanelian/instapack) for easy, rapid, and painless web app development using TypeScript!
+> Shameless self-promotion: **use [instapack](https://github.com/ryanelian/instapack) for easy, rapid, and painless web app development using TypeScript!**
 
 ## Alternative Techniques
 
 - Include everything implicitly: :ok_hand:
+
+  - EXCEPT `es2018-async-iterable` AND `es2019-symbol` because they rely on `Symbol` object being available at runtime. (ES015+ only)
 
 ```ts
 import 'ts-polyfill';
@@ -88,7 +92,7 @@ Above version 0.0.4 (last known compatibility with TypeScript 2.8.3), we follow 
 
 - We will update the polyfills whenever [the official TypeScript libs](https://github.com/Microsoft/TypeScript/tree/master/lib) change. (It happens)
 
-- We will protect ts-polyfill consumers against breaking changes in core-js: our API will probably never change, but core-js API may change. (core-js version 3 coming soon...)
+- We will protect ts-polyfill consumers against breaking changes in core-js: our API will probably never change, but core-js API may change. (For example: core-js migration from 2 to 3)
 
 - We reduce total polyfill size by targeting ES5. (TypeScript projects usually transpile down to ES5, but core-js polyfills ES3)
 
