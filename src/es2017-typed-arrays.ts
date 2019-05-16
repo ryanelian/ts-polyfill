@@ -22,38 +22,55 @@
 //     new (): Int8Array;
 // }
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
+// Here's the deal. Despite new TypedArray(x) is available in IE10, new TypedArray() might not. 
+// So need polyfill...
+import 'core-js/es/typed-array/int8-array';
+
 // interface Uint8ArrayConstructor {
 //     new (): Uint8Array;
 // }
+
+import 'core-js/es/typed-array/uint8-array';
 
 // interface Uint8ClampedArrayConstructor {
 //     new (): Uint8ClampedArray;
 // }
 
+import 'core-js/es/typed-array/uint8-clamped-array';
+
 // interface Int16ArrayConstructor {
 //     new (): Int16Array;
 // }
+
+import 'core-js/es/typed-array/int16-array';
 
 // interface Uint16ArrayConstructor {
 //     new (): Uint16Array;
 // }
 
+import 'core-js/es/typed-array/uint16-array';
+
 // interface Int32ArrayConstructor {
 //     new (): Int32Array;
 // }
+
+import 'core-js/es/typed-array/int32-array';
 
 // interface Uint32ArrayConstructor {
 //     new (): Uint32Array;
 // }
 
+import 'core-js/es/typed-array/uint32-array';
+
 // interface Float32ArrayConstructor {
 //     new (): Float32Array;
 // }
+
+import 'core-js/es/typed-array/float32-array';
 
 // interface Float64ArrayConstructor {
 //     new (): Float64Array;
 // }
 
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
-// TypedArray: Constructor without arguments
-// Supported down to IE10? No polyfill in core-js 3
+import 'core-js/es/typed-array/float64-array';
