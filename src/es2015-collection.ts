@@ -1,5 +1,22 @@
-// https://github.com/Microsoft/TypeScript/blob/master/lib/lib.es2015.collection.d.ts
-// 5f9c34b April 5, 2018
+// /*! *****************************************************************************
+// Copyright (c) Microsoft Corporation. All rights reserved. 
+// Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+// this file except in compliance with the License. You may obtain a copy of the
+// License at http://www.apache.org/licenses/LICENSE-2.0  
+ 
+// THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+// WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE, 
+// MERCHANTABLITY OR NON-INFRINGEMENT. 
+ 
+// See the Apache Version 2.0 License for specific language governing permissions
+// and limitations under the License.
+// ***************************************************************************** */
+
+
+
+// /// <reference no-default-lib="true"/>
+
 
 // interface Map<K, V> {
 //     clear(): void;
@@ -13,7 +30,7 @@
 
 // interface MapConstructor {
 //     new(): Map<any, any>;
-//     new<K, V>(entries?: ReadonlyArray<[K, V]> | null): Map<K, V>;
+//     new<K, V>(entries?: ReadonlyArray<readonly [K, V]> | null): Map<K, V>;
 //     readonly prototype: Map<any, any>;
 // }
 // declare var Map: MapConstructor;
@@ -25,7 +42,7 @@
 //     readonly size: number;
 // }
 
-import 'core-js/es6/map';
+import 'core-js/es/map';
 
 // interface WeakMap<K extends object, V> {
 //     delete(key: K): boolean;
@@ -35,13 +52,12 @@ import 'core-js/es6/map';
 // }
 
 // interface WeakMapConstructor {
-//     new (): WeakMap<object, any>;
-//     new <K extends object, V>(entries?: ReadonlyArray<[K, V]> | null): WeakMap<K, V>;
+//     new <K extends object = object, V = any>(entries?: ReadonlyArray<[K, V]> | null): WeakMap<K, V>;
 //     readonly prototype: WeakMap<object, any>;
 // }
 // declare var WeakMap: WeakMapConstructor;
 
-import 'core-js/es6/weak-map';
+import 'core-js/es/weak-map';
 
 // interface Set<T> {
 //     add(value: T): this;
@@ -53,8 +69,7 @@ import 'core-js/es6/weak-map';
 // }
 
 // interface SetConstructor {
-//     new (): Set<any>;
-//     new <T>(values?: ReadonlyArray<T> | null): Set<T>;
+//     new <T = any>(values?: ReadonlyArray<T> | null): Set<T>;
 //     readonly prototype: Set<any>;
 // }
 // declare var Set: SetConstructor;
@@ -65,7 +80,7 @@ import 'core-js/es6/weak-map';
 //     readonly size: number;
 // }
 
-import 'core-js/es6/set';
+import 'core-js/es/set';
 
 // interface WeakSet<T extends object> {
 //     add(value: T): this;
@@ -74,10 +89,9 @@ import 'core-js/es6/set';
 // }
 
 // interface WeakSetConstructor {
-//     new (): WeakSet<object>;
-//     new <T extends object>(values?: ReadonlyArray<T> | null): WeakSet<T>;
+//     new <T extends object = object>(values?: ReadonlyArray<T> | null): WeakSet<T>;
 //     readonly prototype: WeakSet<object>;
 // }
 // declare var WeakSet: WeakSetConstructor;
 
-import 'core-js/es6/weak-set';
+import 'core-js/es/weak-set';

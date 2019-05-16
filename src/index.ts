@@ -1,7 +1,7 @@
-import './es2015-core';
-
-import './es2015-promise';
 import './es2015-collection';
+import './es2015-core';
+import './es2015-iterable';
+import './es2015-promise';
 import './es2015-reflect';
 
 import './es2016-array-include';

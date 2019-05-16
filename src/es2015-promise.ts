@@ -1,38 +1,22 @@
-// https://github.com/Microsoft/TypeScript/blob/master/lib/lib.d.ts
-// 5f9c34b April 5, 2018
+// /*! *****************************************************************************
+// Copyright (c) Microsoft Corporation. All rights reserved. 
+// Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+// this file except in compliance with the License. You may obtain a copy of the
+// License at http://www.apache.org/licenses/LICENSE-2.0  
+ 
+// THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+// WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE, 
+// MERCHANTABLITY OR NON-INFRINGEMENT. 
+ 
+// See the Apache Version 2.0 License for specific language governing permissions
+// and limitations under the License.
+// ***************************************************************************** */
 
-// interface PromiseLike<T> {
-//     /**
-//      * Attaches callbacks for the resolution and/or rejection of the Promise.
-//      * @param onfulfilled The callback to execute when the Promise is resolved.
-//      * @param onrejected The callback to execute when the Promise is rejected.
-//      * @returns A Promise for the completion of which ever callback is executed.
-//      */
-//     then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): PromiseLike<TResult1 | TResult2>;
-// }
 
-// /**
-//  * Represents the completion of an asynchronous operation
-//  */
-// interface Promise<T> {
-//     /**
-//      * Attaches callbacks for the resolution and/or rejection of the Promise.
-//      * @param onfulfilled The callback to execute when the Promise is resolved.
-//      * @param onrejected The callback to execute when the Promise is rejected.
-//      * @returns A Promise for the completion of which ever callback is executed.
-//      */
-//     then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): Promise<TResult1 | TResult2>;
 
-//     /**
-//      * Attaches a callback for only the rejection of the Promise.
-//      * @param onrejected The callback to execute when the Promise is rejected.
-//      * @returns A Promise for the completion of the callback.
-//      */
-//     catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): Promise<T | TResult>;
-// }
+// /// <reference no-default-lib="true"/>
 
-// https://github.com/Microsoft/TypeScript/blob/master/lib/lib.es2015.promise.d.ts
-// 451561e on Apr 27, 2017
 
 // interface PromiseConstructor {
 //     /**
@@ -43,7 +27,7 @@
 //     /**
 //      * Creates a new Promise.
 //      * @param executor A callback used to initialize the promise. This callback is passed two arguments:
-//      * a resolve callback used resolve the promise with a value or the result of another promise,
+//      * a resolve callback used to resolve the promise with a value or the result of another promise,
 //      * and a reject callback used to reject the promise with a provided reason or error.
 //      */
 //     new <T>(executor: (resolve: (value?: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void): Promise<T>;
@@ -231,4 +215,4 @@
 
 // declare var Promise: PromiseConstructor;
 
-import 'core-js/es6/promise';
+import 'core-js/es/promise';

@@ -1,5 +1,22 @@
-// https://github.com/Microsoft/TypeScript/blob/master/lib/lib.es2015.core.d.ts
-// 530d7e9 on Feb 22, 2018
+// /*! *****************************************************************************
+// Copyright (c) Microsoft Corporation. All rights reserved. 
+// Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+// this file except in compliance with the License. You may obtain a copy of the
+// License at http://www.apache.org/licenses/LICENSE-2.0  
+ 
+// THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+// WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE, 
+// MERCHANTABLITY OR NON-INFRINGEMENT. 
+ 
+// See the Apache Version 2.0 License for specific language governing permissions
+// and limitations under the License.
+// ***************************************************************************** */
+
+
+
+// /// <reference no-default-lib="true"/>
+
 
 // interface Array<T> {
 //     /**
@@ -14,7 +31,8 @@
 //     find<S extends T>(predicate: (this: void, value: T, index: number, obj: T[]) => value is S, thisArg?: any): S | undefined;
 //     find(predicate: (value: T, index: number, obj: T[]) => boolean, thisArg?: any): T | undefined;
 
-import 'core-js/fn/array/find';
+import 'core-js/es/array/find';
+import 'core-js/es/typed-array/find';
 
 //     /**
 //      * Returns the index of the first element in the array where predicate is true, and -1
@@ -27,7 +45,8 @@ import 'core-js/fn/array/find';
 //      */
 //     findIndex(predicate: (value: T, index: number, obj: T[]) => boolean, thisArg?: any): number;
 
-import 'core-js/fn/array/find-index';
+import 'core-js/es/array/find-index';
+import 'core-js/es/typed-array/find-index';
 
 //     /**
 //      * Returns the this object after filling the section identified by start and end with value
@@ -39,7 +58,8 @@ import 'core-js/fn/array/find-index';
 //      */
 //     fill(value: T, start?: number, end?: number): this;
 
-import 'core-js/fn/array/fill';
+import 'core-js/es/array/fill';
+import 'core-js/es/typed-array/fill';
 
 //     /**
 //      * Returns the this object after copying a section of the array identified by start and end
@@ -53,7 +73,8 @@ import 'core-js/fn/array/fill';
 //     copyWithin(target: number, start: number, end?: number): this;
 // }
 
-import 'core-js/fn/array/copy-within';
+import 'core-js/es/array/copy-within';
+import 'core-js/es/typed-array/copy-within';
 
 // interface ArrayConstructor {
 //     /**
@@ -61,6 +82,7 @@ import 'core-js/fn/array/copy-within';
 //      * @param arrayLike An array-like object to convert to an array.
 //      */
 //     from<T>(arrayLike: ArrayLike<T>): T[];
+
 //     /**
 //      * Creates an array from an iterable object.
 //      * @param arrayLike An array-like object to convert to an array.
@@ -69,7 +91,8 @@ import 'core-js/fn/array/copy-within';
 //      */
 //     from<T, U>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => U, thisArg?: any): U[];
 
-import 'core-js/fn/array/from';
+import 'core-js/es/array/from';
+import 'core-js/es/typed-array/from';
 
 //     /**
 //      * Returns a new array from a set of elements.
@@ -78,13 +101,12 @@ import 'core-js/fn/array/from';
 //     of<T>(...items: T[]): T[];
 // }
 
-import 'core-js/fn/array/of';
+import 'core-js/es/array/of';
+import 'core-js/es/typed-array/of';
 
 // interface DateConstructor {
 //     new (value: number | string | Date): Date;
 // }
-
-// RYAN: hmmm...?
 
 // interface Function {
 //     /**
@@ -93,7 +115,7 @@ import 'core-js/fn/array/of';
 //     readonly name: string;
 // }
 
-import 'core-js/fn/function/name';
+import 'core-js/es/function/name';
 
 // interface Math {
 //     /**
@@ -102,7 +124,7 @@ import 'core-js/fn/function/name';
 //      */
 //     clz32(x: number): number;
 
-import 'core-js/fn/math/clz32';
+import 'core-js/es/math/clz32';
 
 //     /**
 //      * Returns the result of 32-bit multiplication of two numbers.
@@ -111,7 +133,7 @@ import 'core-js/fn/math/clz32';
 //      */
 //     imul(x: number, y: number): number;
 
-import 'core-js/fn/math/imul';
+import 'core-js/es/math/imul';
 
 //     /**
 //      * Returns the sign of the x, indicating whether x is positive, negative or zero.
@@ -119,7 +141,7 @@ import 'core-js/fn/math/imul';
 //      */
 //     sign(x: number): number;
 
-import 'core-js/fn/math/sign';
+import 'core-js/es/math/sign';
 
 //     /**
 //      * Returns the base 10 logarithm of a number.
@@ -127,7 +149,7 @@ import 'core-js/fn/math/sign';
 //      */
 //     log10(x: number): number;
 
-import 'core-js/fn/math/log10';
+import 'core-js/es/math/log10';
 
 //     /**
 //      * Returns the base 2 logarithm of a number.
@@ -135,7 +157,7 @@ import 'core-js/fn/math/log10';
 //      */
 //     log2(x: number): number;
 
-import 'core-js/fn/math/log2';
+import 'core-js/es/math/log2';
 
 //     /**
 //      * Returns the natural logarithm of 1 + x.
@@ -143,7 +165,7 @@ import 'core-js/fn/math/log2';
 //      */
 //     log1p(x: number): number;
 
-import 'core-js/fn/math/log1p';
+import 'core-js/es/math/log1p';
 
 //     /**
 //      * Returns the result of (e^x - 1), which is an implementation-dependent approximation to
@@ -153,7 +175,7 @@ import 'core-js/fn/math/log1p';
 //      */
 //     expm1(x: number): number;
 
-import 'core-js/fn/math/expm1';
+import 'core-js/es/math/expm1';
 
 //     /**
 //      * Returns the hyperbolic cosine of a number.
@@ -161,7 +183,7 @@ import 'core-js/fn/math/expm1';
 //      */
 //     cosh(x: number): number;
 
-import 'core-js/fn/math/cosh';
+import 'core-js/es/math/cosh';
 
 //     /**
 //      * Returns the hyperbolic sine of a number.
@@ -169,7 +191,7 @@ import 'core-js/fn/math/cosh';
 //      */
 //     sinh(x: number): number;
 
-import 'core-js/fn/math/sinh';
+import 'core-js/es/math/sinh';
 
 //     /**
 //      * Returns the hyperbolic tangent of a number.
@@ -177,7 +199,7 @@ import 'core-js/fn/math/sinh';
 //      */
 //     tanh(x: number): number;
 
-import 'core-js/fn/math/tanh';
+import 'core-js/es/math/tanh';
 
 //     /**
 //      * Returns the inverse hyperbolic cosine of a number.
@@ -185,7 +207,7 @@ import 'core-js/fn/math/tanh';
 //      */
 //     acosh(x: number): number;
 
-import 'core-js/fn/math/acosh';
+import 'core-js/es/math/acosh';
 
 //     /**
 //      * Returns the inverse hyperbolic sine of a number.
@@ -193,7 +215,7 @@ import 'core-js/fn/math/acosh';
 //      */
 //     asinh(x: number): number;
 
-import 'core-js/fn/math/asinh';
+import 'core-js/es/math/asinh';
 
 //     /**
 //      * Returns the inverse hyperbolic tangent of a number.
@@ -201,7 +223,7 @@ import 'core-js/fn/math/asinh';
 //      */
 //     atanh(x: number): number;
 
-import 'core-js/fn/math/atanh';
+import 'core-js/es/math/atanh';
 
 //     /**
 //      * Returns the square root of the sum of squares of its arguments.
@@ -214,7 +236,7 @@ import 'core-js/fn/math/atanh';
 //      */
 //     hypot(...values: number[]): number;
 
-import 'core-js/fn/math/hypot';
+import 'core-js/es/math/hypot';
 
 //     /**
 //      * Returns the integral part of the a numeric expression, x, removing any fractional digits.
@@ -223,7 +245,7 @@ import 'core-js/fn/math/hypot';
 //      */
 //     trunc(x: number): number;
 
-import 'core-js/fn/math/trunc';
+import 'core-js/es/math/trunc';
 
 //     /**
 //      * Returns the nearest single precision float representation of a number.
@@ -231,7 +253,7 @@ import 'core-js/fn/math/trunc';
 //      */
 //     fround(x: number): number;
 
-import 'core-js/fn/math/fround';
+import 'core-js/es/math/fround';
 
 //     /**
 //      * Returns an implementation-dependent approximation to the cube root of number.
@@ -240,7 +262,7 @@ import 'core-js/fn/math/fround';
 //     cbrt(x: number): number;
 // }
 
-import 'core-js/fn/math/cbrt';
+import 'core-js/es/math/cbrt';
 
 // interface NumberConstructor {
 //     /**
@@ -250,7 +272,7 @@ import 'core-js/fn/math/cbrt';
 //      */
 //     readonly EPSILON: number;
 
-import 'core-js/fn/number/epsilon';
+import 'core-js/es/number/epsilon';
 
 //     /**
 //      * Returns true if passed value is finite.
@@ -260,7 +282,7 @@ import 'core-js/fn/number/epsilon';
 //      */
 //     isFinite(number: number): boolean;
 
-import 'core-js/fn/number/is-finite';
+import 'core-js/es/number/is-finite';
 
 //     /**
 //      * Returns true if the value passed is an integer, false otherwise.
@@ -268,7 +290,7 @@ import 'core-js/fn/number/is-finite';
 //      */
 //     isInteger(number: number): boolean;
 
-import 'core-js/fn/number/is-integer';
+import 'core-js/es/number/is-integer';
 
 //     /**
 //      * Returns a Boolean value that indicates whether a value is the reserved value NaN (not a
@@ -278,7 +300,7 @@ import 'core-js/fn/number/is-integer';
 //      */
 //     isNaN(number: number): boolean;
 
-import 'core-js/fn/number/is-nan';
+import 'core-js/es/number/is-nan';
 
 //     /**
 //      * Returns true if the value passed is a safe integer.
@@ -286,7 +308,7 @@ import 'core-js/fn/number/is-nan';
 //      */
 //     isSafeInteger(number: number): boolean;
 
-import 'core-js/fn/number/is-safe-integer';
+import 'core-js/es/number/is-safe-integer';
 
 //     /**
 //      * The value of the largest integer n such that n and n + 1 are both exactly representable as
@@ -295,7 +317,7 @@ import 'core-js/fn/number/is-safe-integer';
 //      */
 //     readonly MAX_SAFE_INTEGER: number;
 
-import 'core-js/fn/number/max-safe-integer';
+import 'core-js/es/number/max-safe-integer';
 
 //     /**
 //      * The value of the smallest integer n such that n and n − 1 are both exactly representable as
@@ -304,7 +326,7 @@ import 'core-js/fn/number/max-safe-integer';
 //      */
 //     readonly MIN_SAFE_INTEGER: number;
 
-import 'core-js/fn/number/min-safe-integer';
+import 'core-js/es/number/min-safe-integer';
 
 //     /**
 //      * Converts a string to a floating-point number.
@@ -312,7 +334,7 @@ import 'core-js/fn/number/min-safe-integer';
 //      */
 //     parseFloat(string: string): number;
 
-import 'core-js/fn/parse-float';
+import 'core-js/es/number/parse-float';
 
 //     /**
 //      * Converts A string to an integer.
@@ -324,7 +346,7 @@ import 'core-js/fn/parse-float';
 //     parseInt(string: string, radix?: number): number;
 // }
 
-import 'core-js/fn/parse-int';
+import 'core-js/es/number/parse-int';
 
 // interface ObjectConstructor {
 //     /**
@@ -334,6 +356,7 @@ import 'core-js/fn/parse-int';
 //      * @param source The source object from which to copy properties.
 //      */
 //     assign<T, U>(target: T, source: U): T & U;
+
 //     /**
 //      * Copy the values of all of the enumerable own properties from one or more source objects to a
 //      * target object. Returns the target object.
@@ -342,6 +365,7 @@ import 'core-js/fn/parse-int';
 //      * @param source2 The second source object from which to copy properties.
 //      */
 //     assign<T, U, V>(target: T, source1: U, source2: V): T & U & V;
+
 //     /**
 //      * Copy the values of all of the enumerable own properties from one or more source objects to a
 //      * target object. Returns the target object.
@@ -351,6 +375,7 @@ import 'core-js/fn/parse-int';
 //      * @param source3 The third source object from which to copy properties.
 //      */
 //     assign<T, U, V, W>(target: T, source1: U, source2: V, source3: W): T & U & V & W;
+
 //     /**
 //      * Copy the values of all of the enumerable own properties from one or more source objects to a
 //      * target object. Returns the target object.
@@ -359,7 +384,7 @@ import 'core-js/fn/parse-int';
 //      */
 //     assign(target: object, ...sources: any[]): any;
 
-import 'core-js/fn/object/assign';
+import 'core-js/es/object/assign';
 
 //     /**
 //      * Returns an array of all symbol properties found directly on object o.
@@ -367,7 +392,7 @@ import 'core-js/fn/object/assign';
 //      */
 //     getOwnPropertySymbols(o: any): symbol[];
 
-// RYAN: Not available. This polyfill is bundled with core-js/es6/symbol
+import 'core-js/es/object/get-own-property-symbols';
 
 //     /**
 //      * Returns true if the values are the same value, false otherwise.
@@ -376,7 +401,7 @@ import 'core-js/fn/object/assign';
 //      */
 //     is(value1: any, value2: any): boolean;
 
-import 'core-js/fn/object/is';
+import 'core-js/es/object/is';
 
 //     /**
 //      * Sets the prototype of a specified object o to  object proto or null. Returns the object o.
@@ -384,8 +409,9 @@ import 'core-js/fn/object/is';
 //      * @param proto The value of the new prototype or null.
 //      */
 //     setPrototypeOf(o: any, proto: object | null): any;
+// }
 
-import 'core-js/fn/object/set-prototype-of';
+import 'core-js/es/object/set-prototype-of';
 
 // interface ReadonlyArray<T> {
 //     /**
@@ -399,6 +425,7 @@ import 'core-js/fn/object/set-prototype-of';
 //      */
 //     find<S extends T>(predicate: (this: void, value: T, index: number, obj: ReadonlyArray<T>) => value is S, thisArg?: any): S | undefined;
 //     find(predicate: (value: T, index: number, obj: ReadonlyArray<T>) => boolean, thisArg?: any): T | undefined;
+
 //     /**
 //      * Returns the index of the first element in the array where predicate is true, and -1
 //      * otherwise.
@@ -410,8 +437,6 @@ import 'core-js/fn/object/set-prototype-of';
 //      */
 //     findIndex(predicate: (value: T, index: number, obj: ReadonlyArray<T>) => boolean, thisArg?: any): number;
 // }
-
-// RYAN: Should be the same stuffs as Array<T> polyfills at the top.
 
 // interface RegExp {
 //     /**
@@ -441,14 +466,14 @@ import 'core-js/fn/object/set-prototype-of';
 //     readonly unicode: boolean;
 // }
 
-import 'core-js/fn/regexp/flags';
+import 'core-js/es/regexp/flags';
 
 // interface RegExpConstructor {
 //     new (pattern: RegExp, flags?: string): RegExp;
 //     (pattern: RegExp, flags?: string): RegExp;
 // }
 
-import 'core-js/fn/regexp/constructor';
+import 'core-js/es/regexp/constructor';
 
 // interface String {
 //     /**
@@ -460,7 +485,7 @@ import 'core-js/fn/regexp/constructor';
 //      */
 //     codePointAt(pos: number): number | undefined;
 
-import 'core-js/fn/string/code-point-at';
+import 'core-js/es/string/code-point-at';
 
 //     /**
 //      * Returns true if searchString appears as a substring of the result of converting this
@@ -471,7 +496,7 @@ import 'core-js/fn/string/code-point-at';
 //      */
 //     includes(searchString: string, position?: number): boolean;
 
-import 'core-js/fn/string/includes';
+import 'core-js/es/string/includes';
 
 //     /**
 //      * Returns true if the sequence of elements of searchString converted to a String is the
@@ -480,7 +505,7 @@ import 'core-js/fn/string/includes';
 //      */
 //     endsWith(searchString: string, endPosition?: number): boolean;
 
-import 'core-js/fn/string/ends-with';
+import 'core-js/es/string/ends-with';
 
 //     /**
 //      * Returns the String value result of normalizing the string into the normalization form
@@ -489,6 +514,7 @@ import 'core-js/fn/string/ends-with';
 //      * is "NFC"
 //      */
 //     normalize(form: "NFC" | "NFD" | "NFKC" | "NFKD"): string;
+
 //     /**
 //      * Returns the String value result of normalizing the string into the normalization form
 //      * named by form as specified in Unicode Standard Annex #15, Unicode Normalization Forms.
@@ -497,7 +523,7 @@ import 'core-js/fn/string/ends-with';
 //      */
 //     normalize(form?: string): string;
 
-// RYAN: Gigantic 140kB polyfill. Not included...
+// https://github.com/walling/unorm/
 
 //     /**
 //      * Returns a String value that is made from count copies appended together. If count is 0,
@@ -506,7 +532,7 @@ import 'core-js/fn/string/ends-with';
 //      */
 //     repeat(count: number): string;
 
-import 'core-js/fn/string/repeat';
+import 'core-js/es/string/repeat';
 
 //     /**
 //      * Returns true if the sequence of elements of searchString converted to a String is the
@@ -515,7 +541,7 @@ import 'core-js/fn/string/repeat';
 //      */
 //     startsWith(searchString: string, position?: number): boolean;
 
-import 'core-js/fn/string/starts-with';
+import 'core-js/es/string/starts-with';
 
 //     /**
 //      * Returns an <a> HTML anchor element and sets the name attribute to the text value
@@ -523,70 +549,71 @@ import 'core-js/fn/string/starts-with';
 //      */
 //     anchor(name: string): string;
 
-import 'core-js/fn/string/anchor';
+import 'core-js/es/string/anchor';
 
 //     /** Returns a <big> HTML element */
 //     big(): string;
 
-import 'core-js/fn/string/big';
+import 'core-js/es/string/anchor';
 
 //     /** Returns a <blink> HTML element */
 //     blink(): string;
 
-import 'core-js/fn/string/blink';
+import 'core-js/es/string/blink';
 
 //     /** Returns a <b> HTML element */
 //     bold(): string;
 
-import 'core-js/fn/string/bold';
+import 'core-js/es/string/bold'
 
 //     /** Returns a <tt> HTML element */
 //     fixed(): string;
 
-import 'core-js/fn/string/fixed';
+import 'core-js/es/string/fixed';
 
 //     /** Returns a <font> HTML element and sets the color attribute value */
 //     fontcolor(color: string): string;
 
-import 'core-js/fn/string/fontcolor';
+import 'core-js/es/string/fontcolor';
 
 //     /** Returns a <font> HTML element and sets the size attribute value */
 //     fontsize(size: number): string;
+
 //     /** Returns a <font> HTML element and sets the size attribute value */
 //     fontsize(size: string): string;
 
-import 'core-js/fn/string/fontsize';
+import 'core-js/es/string/fontsize';
 
 //     /** Returns an <i> HTML element */
 //     italics(): string;
 
-import 'core-js/fn/string/italics';
+import 'core-js/es/string/italics';
 
 //     /** Returns an <a> HTML element and sets the href attribute value */
 //     link(url: string): string;
 
-import 'core-js/fn/string/link';
+import 'core-js/es/string/link';
 
 //     /** Returns a <small> HTML element */
 //     small(): string;
 
-import 'core-js/fn/string/small';
+import 'core-js/es/string/small';
 
 //     /** Returns a <strike> HTML element */
 //     strike(): string;
 
-import 'core-js/fn/string/strike';
+import 'core-js/es/string/strike';
 
 //     /** Returns a <sub> HTML element */
 //     sub(): string;
 
-import 'core-js/fn/string/sub';
+import 'core-js/es/string/sub';
 
 //     /** Returns a <sup> HTML element */
 //     sup(): string;
 // }
 
-import 'core-js/fn/string/sup';
+import 'core-js/es/string/sup';
 
 // interface StringConstructor {
 //     /**
@@ -595,7 +622,7 @@ import 'core-js/fn/string/sup';
 //      */
 //     fromCodePoint(...codePoints: number[]): string;
 
-import 'core-js/fn/string/from-code-point';
+import 'core-js/es/string/from-code-point';
 
 //     /**
 //      * String.raw is intended for use as a tag function of a Tagged Template String. When called
@@ -607,4 +634,4 @@ import 'core-js/fn/string/from-code-point';
 //     raw(template: TemplateStringsArray, ...substitutions: any[]): string;
 // }
 
-import 'core-js/fn/string/raw';
+import 'core-js/es/string/raw';

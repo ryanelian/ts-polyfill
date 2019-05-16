@@ -98,6 +98,4 @@ Above version 0.0.4 (last known compatibility with TypeScript 2.8.3), we follow 
 
     - If you REALLY need it, use polyfill provided by [unorm](https://github.com/walling/unorm) library.
 
-- `es2015.core` [Object.getOwnPropertySymbols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols) polyfill is missing because `es2015.symbol` and `es2015.symbol.wellknown` libs polyfills are not implemented.
-
 - `es2015.reflect` method `Reflect.construct` cannot: [sets new.target meta-property, Array subclassing, RegExp subclassing, Function subclassing](http://kangax.github.io/compat-table/es6/#test-Reflect).

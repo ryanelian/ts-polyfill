@@ -2,11 +2,17 @@
 
 This document will be used to track TypeScript lib changes inbetween versions, for libs relevant to ts-polyfill.
 
+### 3.4.5
+
+https://github.com/microsoft/TypeScript/releases/tag/v3.4.5
+
 ### 3.3.3
 
 https://github.com/Microsoft/TypeScript/releases/tag/v3.3.1
 
-- No changes in TypeScript declarations. TypeScript tag `3.3.3` is missing from GitHub. core-js updated with bug fixes.
+- No changes in TypeScript declarations. core-js updated with bug fixes.
+
+> TypeScript tag `3.3.3` is missing from GitHub...
 
 ### 3.2.2
 
