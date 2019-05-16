@@ -28,8 +28,7 @@
       "es2018.asynciterable",
       "es2018.promise",
       "es2019.array",
-      "es2019.string",      
-      "es2019.symbol"
+      "es2019.string"
     ]
   }
 }
@@ -51,7 +50,6 @@ import 'ts-polyfill/lib/es2018-async-iterable';   // for-await-of
 import 'ts-polyfill/lib/es2018-promise';
 import 'ts-polyfill/lib/es2019-array';
 import 'ts-polyfill/lib/es2019-string';
-import 'ts-polyfill/lib/es2019-symbol';
 ```
 
 > Shameless self-promotion: **use [instapack](https://github.com/ryanelian/instapack) for easy, rapid, and painless web app development using TypeScript!**
