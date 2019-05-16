@@ -2,7 +2,7 @@
 
 > Runtime polyfills for TypeScript libs, powered by [core-js](https://github.com/zloirock/core-js)! :battery: :pill:
 
-[![npm](https://img.shields.io/npm/v/ts-polyfill.svg)](https://www.npmjs.com/package/ts-polyfill) [![Build Status](https://api.travis-ci.org/ryanelian/ts-polyfill.svg?branch=master)](https://travis-ci.org/ryanelian/ts-polyfill)
+[![npm](https://img.shields.io/npm/v/ts-polyfill.svg)](https://www.npmjs.com/package/ts-polyfill) [![Build Status](https://ryanelian.visualstudio.com/ts-polyfill/_apis/build/status/ryanelian.ts-polyfill?branchName=master)](https://ryanelian.visualstudio.com/ts-polyfill/_build/latest?definitionId=3&branchName=master)
 
 ## Install
 
