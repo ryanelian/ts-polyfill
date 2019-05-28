@@ -1,6 +1,6 @@
 # TS-Polyfill
 
-> Runtime polyfills for TypeScript libs, powered by [core-js](https://github.com/zloirock/core-js)! :battery: :pill:
+> Runtime polyfills for TypeScript libs, powered by [core-js](https://github.com/zloirock/core-js)! :battery: :nut_and_bolt:
 
 [![npm](https://img.shields.io/npm/v/ts-polyfill.svg)](https://www.npmjs.com/package/ts-polyfill) [![Build Status](https://ryanelian.visualstudio.com/ts-polyfill/_apis/build/status/ryanelian.ts-polyfill?branchName=master)](https://ryanelian.visualstudio.com/ts-polyfill/_build/latest?definitionId=3&branchName=master)
 
@@ -28,7 +28,8 @@
       "es2018.asynciterable",
       "es2018.promise",
       "es2019.array",
-      "es2019.string"
+      "es2019.string",
+      "es2020.string
     ]
   }
 }
@@ -50,6 +51,7 @@ import 'ts-polyfill/lib/es2018-async-iterable';   // for-await-of
 import 'ts-polyfill/lib/es2018-promise';
 import 'ts-polyfill/lib/es2019-array';
 import 'ts-polyfill/lib/es2019-string';
+import 'ts-polyfill/lib/es2020-string';
 ```
 
 > Shameless self-promotion: **use [instapack](https://github.com/ryanelian/instapack) for easy, rapid, and painless web app development using TypeScript!**
@@ -88,9 +90,9 @@ Above version 0.0.4 (last known compatibility with TypeScript 2.8.3), we follow 
 
   - **Example 2:** `esnext.feature` libs are probably unstable. We will wait for them to be marked as something like `es2018.feature` before attempting to polyfill them.
 
-- We will update the polyfills whenever [the official TypeScript libs](https://github.com/Microsoft/TypeScript/tree/master/lib) change. (It happens)
+- We will update the polyfills whenever [the official TypeScript libs](https://github.com/Microsoft/TypeScript/tree/master/lib) change. (It happens yo)
 
-- We will protect ts-polyfill consumers against breaking changes in core-js: our API will probably never change, but core-js API may change. (For example: core-js migration from 2 to 3)
+- We will protect ts-polyfill consumers against breaking changes in core-js: our API will probably never change, but core-js API may change. (For example: core-js migration from version 2 to version 3)
 
 - We reduce total polyfill size by targeting ES5. (TypeScript projects usually transpile down to ES5, but core-js polyfills ES3)
 
