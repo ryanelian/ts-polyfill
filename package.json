@@ -23,6 +23,7 @@
     "url": "https://elian.plus"
   },
   "main": "dist/ts-polyfill.js",
+  "types": "types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/ryanelian/ts-polyfill.git"
