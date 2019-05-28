@@ -14,3 +14,5 @@ import './es2018-promise';
 
 import './es2019-array';
 import './es2019-string';
+
+import './es2020-string';
