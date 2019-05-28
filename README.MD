@@ -68,7 +68,7 @@ import 'ts-polyfill';
 
 - Include everything using a pre-built script: download then include these as `<script>` in your HTML (before your app script):
 
-  - [ts-polyfill.min.js](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js) (59.0 kB, 20.6 kB GZIP)
+  - [ts-polyfill.min.js](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js) (60.3 kB, 21.1 kB GZIP)
 
   - [ts-polyfill.min.js.map](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js.map) 
 

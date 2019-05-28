@@ -1,0 +1,10 @@
+import 'core-js/es/symbol/iterator';
+import 'core-js/es/array/iterator';
+import 'core-js/es/array/entries';
+import 'core-js/es/array/keys';
+import 'core-js/es/array/values';
+import 'core-js/es/string/iterator';
+import 'core-js/es/typed-array/iterator';
+import 'core-js/es/typed-array/entries';
+import 'core-js/es/typed-array/keys';
+import 'core-js/es/typed-array/values';

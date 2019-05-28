@@ -1,0 +1,9 @@
+import 'core-js/es/typed-array/int8-array';
+import 'core-js/es/typed-array/uint8-array';
+import 'core-js/es/typed-array/uint8-clamped-array';
+import 'core-js/es/typed-array/int16-array';
+import 'core-js/es/typed-array/uint16-array';
+import 'core-js/es/typed-array/int32-array';
+import 'core-js/es/typed-array/uint32-array';
+import 'core-js/es/typed-array/float32-array';
+import 'core-js/es/typed-array/float64-array';

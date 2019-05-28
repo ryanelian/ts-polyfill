@@ -1,0 +1,13 @@
+import 'core-js/es/reflect/apply';
+import 'core-js/es/reflect/construct';
+import 'core-js/es/reflect/define-property';
+import 'core-js/es/reflect/delete-property';
+import 'core-js/es/reflect/get';
+import 'core-js/es/reflect/get-own-property-descriptor';
+import 'core-js/es/reflect/get-prototype-of';
+import 'core-js/es/reflect/has';
+import 'core-js/es/reflect/is-extensible';
+import 'core-js/es/reflect/own-keys';
+import 'core-js/es/reflect/prevent-extensions';
+import 'core-js/es/reflect/set';
+import 'core-js/es/reflect/set-prototype-of';
