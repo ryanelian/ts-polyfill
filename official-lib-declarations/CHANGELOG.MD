@@ -2,6 +2,20 @@
 
 This document will be used to track TypeScript lib changes inbetween versions, for libs relevant to ts-polyfill.
 
+### 3.5.0-rc
+
+https://devblogs.microsoft.com/typescript/announcing-typescript-3-5-rc/
+
+- New libs: ES2020 String, ES2020 Well-Known Symbols
+
+**Breaking Changes:**
+
+- Generic type parameters are implicitly constrained to `unknown`
+
+- lib.d.ts includes the `Omit` helper type
+
+- `Object.keys` rejects primitives in ES5
+
 ### 3.4.5
 
 https://github.com/microsoft/TypeScript/releases/tag/v3.4.5
