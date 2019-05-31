@@ -29,7 +29,7 @@
       "es2018.promise",
       "es2019.array",
       "es2019.string",
-      "es2020.string
+      "es2020.string"
     ]
   }
 }
