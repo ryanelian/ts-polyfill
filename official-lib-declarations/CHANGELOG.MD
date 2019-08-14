@@ -2,7 +2,15 @@
 
 This document will be used to track TypeScript lib changes inbetween versions, for libs relevant to ts-polyfill.
 
-### 3.5.0-rc
+### 3.5.3
+
+https://github.com/microsoft/TypeScript/releases/tag/v3.5.3
+
+- New lib: ES2019 Object
+
+### 3.5.1 / 3.5.0-rc
+
+https://github.com/microsoft/TypeScript/releases/tag/v3.5.1
 
 https://devblogs.microsoft.com/typescript/announcing-typescript-3-5-rc/
 

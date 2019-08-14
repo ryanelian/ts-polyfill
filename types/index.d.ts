@@ -10,4 +10,5 @@ import './es2017-typed-arrays';
 import './es2018-promise';
 import './es2019-array';
 import './es2019-string';
+import './es2019-object';
 import './es2020-string';

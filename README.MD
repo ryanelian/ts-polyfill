@@ -28,6 +28,7 @@
       "es2018.asynciterable",
       "es2018.promise",
       "es2019.array",
+      "es2019.object",
       "es2019.string",
       "es2020.string"
     ]
@@ -37,9 +38,9 @@
 
 - In above example, we are targeting ES2015 so only ES2016+ polyfills are needed!
 
-  - **[It's 2019.](https://www.microsoft.com/en-us/windowsforbusiness/end-of-windows-7-support)** You should be targeting ES2015 or ES2016 if possible.
+  - **[It's nearly 2020.](https://www.microsoft.com/en-us/windowsforbusiness/end-of-windows-7-support)** You should be targeting ES2015 or higher. [Yes, seriously. Insist to your customers.](https://www.extremetech.com/internet/290872-the-new-microsoft-edge-browser-will-have-an-ie-mode)
 
-  - The complete set of polyfills (including ES2015 for poor souls targeting ES5) can be found here: https://github.com/ryanelian/ts-polyfill/tree/master/lib
+  - The complete list of polyfills (including ES2015 polyfills for poor souls targeting ES5) can be found here: https://github.com/ryanelian/ts-polyfill/tree/master/lib
 
 - Then, in the entry point of your application, import the polyfills:
 
@@ -50,6 +51,7 @@ import 'ts-polyfill/lib/es2017-string';
 import 'ts-polyfill/lib/es2018-async-iterable';   // for-await-of
 import 'ts-polyfill/lib/es2018-promise';
 import 'ts-polyfill/lib/es2019-array';
+import 'ts-polyfill/lib/es2019-object';
 import 'ts-polyfill/lib/es2019-string';
 import 'ts-polyfill/lib/es2020-string';
 ```
