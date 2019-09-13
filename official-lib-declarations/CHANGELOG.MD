@@ -2,6 +2,18 @@
 
 This document will be used to track TypeScript lib changes inbetween versions, for libs relevant to ts-polyfill.
 
+### 3.6.3
+
+https://github.com/microsoft/TypeScript/releases/tag/v3.6.3
+
+- New lib: Async Generator
+
+- ES2015 RegExp constructor now accept string.
+
+- Minor changes in iterator related libs.
+
+- Fixed comment in ES2019 string lib.
+
 ### 3.5.3
 
 https://github.com/microsoft/TypeScript/releases/tag/v3.5.3

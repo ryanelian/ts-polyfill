@@ -23,6 +23,7 @@ Copy-Item .\node_modules\typescript\lib\lib.es2017.string.d.ts -Destination .\of
 Copy-Item .\node_modules\typescript\lib\lib.es2017.typedarrays.d.ts -Destination .\official-lib-declarations\lib.es2017.typedarrays.d.ts
 
 Copy-Item .\node_modules\typescript\lib\lib.es2018.asynciterable.d.ts -Destination .\official-lib-declarations\lib.es2018.asynciterable.d.ts
+Copy-Item .\node_modules\typescript\lib\lib.es2018.asyncgenerator.d.ts -Destination .\official-lib-declarations\lib.es2018.asyncgenerator.d.ts
 Copy-Item .\node_modules\typescript\lib\lib.es2018.intl.d.ts -Destination .\official-lib-declarations\lib.es2018.intl.d.ts
 Copy-Item .\node_modules\typescript\lib\lib.es2018.promise.d.ts -Destination .\official-lib-declarations\lib.es2018.promise.d.ts
 Copy-Item .\node_modules\typescript\lib\lib.es2018.regexp.d.ts -Destination .\official-lib-declarations\lib.es2018.regexp.d.ts
