@@ -6,6 +6,8 @@ This document will be used to track TypeScript lib changes inbetween versions, f
 
 https://github.com/microsoft/TypeScript/releases/tag/v3.6.3
 
+- *No dist binary changes*
+
 - New lib: Async Generator
 
 - ES2015 RegExp constructor now accept string.
