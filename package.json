@@ -1,6 +1,6 @@
 {
   "name": "ts-polyfill",
-  "version": "3.6.3",
+  "version": "3.7.1",
   "description": "Runtime polyfills for TypeScript libs, powered by core-js!",
   "keywords": [
     "typescript",
@@ -19,8 +19,7 @@
   "license": "Apache-2.0",
   "author": {
     "name": "Ryan Elian",
-    "email": "ryan.elian@accelist.com",
-    "url": "https://elian.plus"
+    "email": "ryan.elian@accelist.com"
   },
   "main": "dist/ts-polyfill.js",
   "types": "types/index.d.ts",
@@ -32,13 +31,13 @@
     "build": "tsc && rollup -c && rollup -c rollup.config.min.js"
   },
   "dependencies": {
-    "core-js": "^3.2.1"
+    "core-js": "^3.3.4"
   },
   "devDependencies": {
-    "rollup": "^1.21.2",
+    "rollup": "^1.25.2",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-uglify": "^6.0.3",
-    "typescript": "^3.6.3"
+    "typescript": "3.7.1-rc"
   }
 }
