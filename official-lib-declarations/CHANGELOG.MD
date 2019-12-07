@@ -2,13 +2,13 @@
 
 This document will be used to track TypeScript lib changes inbetween versions, for libs relevant to ts-polyfill.
 
-### 3.7.1
+### 3.7.3
 
 https://github.com/microsoft/TypeScript/releases/tag/v3.7-rc
 
 - Mostly parameters changes (data types). Minor and does not break existing codes apparently.
 
-- No new functions.
+- New `globalThis` special-case polyfill added.
 
 ### 3.6.3
 

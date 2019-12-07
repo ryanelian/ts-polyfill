@@ -12,3 +12,4 @@ import './es2019-array';
 import './es2019-string';
 import './es2019-object';
 import './es2020-string';
+import './es2020-global-this';

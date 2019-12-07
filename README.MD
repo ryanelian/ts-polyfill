@@ -38,7 +38,7 @@
 
 - In above example, we are targeting ES2015 so only ES2016+ polyfills are needed!
 
-  - **[It's nearly 2020.](https://www.microsoft.com/en-us/windowsforbusiness/end-of-windows-7-support)** You should be targeting ES2015 or higher. [Yes, seriously. Insist to your customers.](https://www.extremetech.com/internet/290872-the-new-microsoft-edge-browser-will-have-an-ie-mode)
+  - **[It's nearly 2020.](https://www.microsoft.com/en-us/windowsforbusiness/end-of-windows-7-support)** You should be targeting ES2015 or higher. [Yes, seriously. Insist to your manager / customers.](https://www.extremetech.com/internet/290872-the-new-microsoft-edge-browser-will-have-an-ie-mode)
 
   - The complete list of polyfills (including ES2015 polyfills for poor souls targeting ES5) can be found here: https://github.com/ryanelian/ts-polyfill/tree/master/lib
 
@@ -54,6 +54,7 @@ import 'ts-polyfill/lib/es2019-array';
 import 'ts-polyfill/lib/es2019-object';
 import 'ts-polyfill/lib/es2019-string';
 import 'ts-polyfill/lib/es2020-string';
+import 'ts-polyfill/lib/es2020-global-this';      // globalThis
 ```
 
 > Shameless self-promotion: **use [instapack](https://github.com/ryanelian/instapack) for easy, rapid, and painless web app development using TypeScript!**
