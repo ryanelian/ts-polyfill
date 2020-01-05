@@ -10,41 +10,42 @@
 
 ## Getting Started
 
-- Modify your project `tsconfig.json` to add type definitions required:
+- Modify your project `tsconfig.json` to add type definitions required.
 
   - *(Obviously, you don't need EVERYTHING. Pick the ones you actually need)*
+
+  - In this example, we are targeting ES2015 so only ES2016 and above polyfills are needed:
 
 ```json
 {
   "compilerOptions": {
-    "target": "es2015",
+    "target": "ES2015",
     "lib": [
-      "dom",
-      "dom.iterable",
-      "es2015",
-      "es2016.array.include",
-      "es2017.object",
-      "es2017.string",
-      "es2018.asynciterable",
-      "es2018.promise",
-      "es2019.array",
-      "es2019.object",
-      "es2019.string",
-      "es2020.string"
+      "DOM",
+      "DOM.Iterable",
+      "ES2015",
+      "ES2016.Array.Include",
+      "ES2017.Object",
+      "ES2017.String",
+      "ES2018.AsyncIterable",
+      "ES2018.Promise",
+      "ES2019.Array",
+      "ES2019.Object",
+      "ES2019.String",
+      "ES2020.String"
     ]
   }
 }
 ```
 
-- In above example, we are targeting ES2015 so only ES2016+ polyfills are needed!
+> **[It's nearly 2020.](https://www.microsoft.com/en-us/windowsforbusiness/end-of-windows-7-support)** You should be targeting ES2015 or higher. [Yes, seriously. Insist to your manager / customers.](https://www.extremetech.com/internet/290872-the-new-microsoft-edge-browser-will-have-an-ie-mode)
 
-  - **[It's nearly 2020.](https://www.microsoft.com/en-us/windowsforbusiness/end-of-windows-7-support)** You should be targeting ES2015 or higher. [Yes, seriously. Insist to your manager / customers.](https://www.extremetech.com/internet/290872-the-new-microsoft-edge-browser-will-have-an-ie-mode)
+- Then, in the entry point of your application, import the polyfills.
 
-  - The complete list of polyfills (including ES2015 polyfills for poor souls targeting ES5) can be found here: https://github.com/ryanelian/ts-polyfill/tree/master/lib
-
-- Then, in the entry point of your application, import the polyfills:
+  - The complete list of available polyfills (including ES2015 polyfills for poor souls targeting ES5) can be found here: https://github.com/ryanelian/ts-polyfill/tree/master/lib
 
 ```ts
+// index.ts
 import 'ts-polyfill/lib/es2016-array-include';
 import 'ts-polyfill/lib/es2017-object';
 import 'ts-polyfill/lib/es2017-string';
@@ -54,7 +55,7 @@ import 'ts-polyfill/lib/es2019-array';
 import 'ts-polyfill/lib/es2019-object';
 import 'ts-polyfill/lib/es2019-string';
 import 'ts-polyfill/lib/es2020-string';
-import 'ts-polyfill/lib/es2020-global-this';      // globalThis
+import 'ts-polyfill/lib/es2020-global-this';      // globalThis (no lib)
 ```
 
 > Shameless self-promotion: **use [instapack](https://github.com/ryanelian/instapack) for easy, rapid, and painless web app development using TypeScript!**
@@ -71,7 +72,7 @@ import 'ts-polyfill';
 
 - Include everything using a pre-built script: download then include these as `<script>` in your HTML (before your app script):
 
-  - [ts-polyfill.min.js](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js) (60.3 kB, 21.1 kB GZIP)
+  - [ts-polyfill.min.js](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js) (66.28 kB, 22.64 kB GZIP)
 
   - [ts-polyfill.min.js.map](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js.map) 
 

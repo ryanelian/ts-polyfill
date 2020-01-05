@@ -18,6 +18,8 @@
     "declarationDir": "types",
 
     "lib": [
+      // "DOM",
+      // "DOM.Iterable",
       "ES5",
       "ES2015.Collection",
       "ES2015.Core",
