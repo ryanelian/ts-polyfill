@@ -1,49 +1,40 @@
 {
   "compilerOptions": {
+    "strict": true,
     "noImplicitAny": false,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictPropertyInitialization": true,
-    "skipLibCheck": true,
-    
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    
-    "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
 
     "outDir": "lib",
     "removeComments": true,
 
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "target": "ES5",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "importHelpers": false,
-    "jsx": "react",
 
     "declaration": true,
     "declarationDir": "types",
 
     "lib": [
-      "dom",
-      "es5",
-      "es2015.collection",
-      "es2015.core",
-      "es2015.iterable",
-      "es2015.promise",
-      "es2015.reflect",
-      "es2016.array.include",
-      "es2017.object",
-      "es2017.string",
-      "es2017.typedarrays",
-      "es2018.promise",
-      "es2019.array",
-      "es2019.symbol",
-      "es2020.string"
+      "ES5",
+      "ES2015.Collection",
+      "ES2015.Core",
+      "ES2015.Iterable",
+      "ES2015.Promise",
+      "ES2015.Reflect",
+      "ES2016.Array.Include",
+      "ES2017.Object",
+      "ES2017.String",
+      "ES2017.TypedArrays",
+      "ES2018.AsyncIterable",
+      "ES2018.Promise",
+      "ES2019.Array",
+      "ES2019.Object",
+      "ES2019.String",
+      "ES2019.Symbol",
+      "ES2020.String"
     ]
   },
   "exclude": [
