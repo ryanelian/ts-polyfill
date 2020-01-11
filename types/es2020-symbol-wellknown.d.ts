@@ -1,1 +1,1 @@
-import './es2020-string';
+import 'core-js/es/string/match-all';

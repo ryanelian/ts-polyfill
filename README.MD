@@ -69,13 +69,15 @@ import 'ts-polyfill/lib/es2020-global-this';      // globalThis (no tsconfig.jso
 
 - Include everything implicitly: :ok_hand:
 
+  - EXCEPT these non-essential polyfills (for portability): `es2015-iterable, es2015-reflect, es2015-symbol, es2015-symbol-wellknown, es2017-typed-arrays, es2018-async-iterable, es2019-symbol, es2020-symbol-wellknown` 
+
 ```ts
 import 'ts-polyfill';
 ```
 
-- Include everything using a pre-built script: download then include these as `<script>` in your HTML (before your app script):
+- Include everything (also with exceptions listed above) using a pre-built script: download then include these as `<script>` in your HTML (before your app script):
 
-  - [ts-polyfill.min.js](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js) (69.96 KB, 24.01 KB GZIP)
+  - [ts-polyfill.min.js](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js) (51.62 KB, 18.32 KB gzip)
 
   - [ts-polyfill.min.js.map](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js.map) 
 
@@ -86,6 +88,12 @@ import 'ts-polyfill';
 Above version 0.0.4 (last known compatibility with TypeScript 2.8.3), we follow TypeScript version. Which means: ts-polyfill 2.9.0 is compatible with TypeScript 2.9.0 libs, and so on!
 
 **Release Cadence:** We will release new version if necessary whenever new TypeScript versions are published.
+
+## Which polyfill to include to use `downlevelIteration` when targeting ES5 in TypeScript?
+
+- `es2015-symbol`
+- `es2015-symbol-wellknown`
+- `es2015-iterable`
 
 ### Why shouldn't I just use core-js directly?
 
@@ -109,4 +117,4 @@ Above version 0.0.4 (last known compatibility with TypeScript 2.8.3), we follow 
 
 - ES2015 Reflect polyfills are best-effort. (15/20)
 
-- ES2015 Symbol and Well Known Symbol polyfills are best-effort. (8/12 and 22/26)
+- ES2015 Symbol and Well-Known Symbol polyfills are best-effort. (8/12 and 22/26)

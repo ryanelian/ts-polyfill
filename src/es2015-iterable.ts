@@ -90,6 +90,8 @@ import 'core-js/es/array/values';
 //     from<T, U>(iterable: Iterable<T> | ArrayLike<T>, mapfn: (v: T, k: number) => U, thisArg?: any): U[];
 // }
 
+import 'core-js/es/array/from';
+
 // interface ReadonlyArray<T> {
 //     /** Iterator of values in the array. */
 //     [Symbol.iterator](): IterableIterator<T>;
@@ -277,6 +279,9 @@ import 'core-js/es/typed-array/values';
 //     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Int8Array;
 // }
 
+import 'core-js/es/typed-array/int8-array';
+import 'core-js/es/typed-array/from';
+
 // interface Uint8Array {
 //     [Symbol.iterator](): IterableIterator<number>;
 //     /**
@@ -304,6 +309,8 @@ import 'core-js/es/typed-array/values';
 //      */
 //     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint8Array;
 // }
+
+import 'core-js/es/typed-array/uint8-array';
 
 // interface Uint8ClampedArray {
 //     [Symbol.iterator](): IterableIterator<number>;
@@ -336,6 +343,8 @@ import 'core-js/es/typed-array/values';
 //     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint8ClampedArray;
 // }
 
+import 'core-js/es/typed-array/uint8-clamped-array';
+
 // interface Int16Array {
 //     [Symbol.iterator](): IterableIterator<number>;
 //     /**
@@ -366,6 +375,8 @@ import 'core-js/es/typed-array/values';
 //     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Int16Array;
 // }
 
+import 'core-js/es/typed-array/int16-array';
+
 // interface Uint16Array {
 //     [Symbol.iterator](): IterableIterator<number>;
 //     /**
@@ -393,6 +404,8 @@ import 'core-js/es/typed-array/values';
 //      */
 //     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint16Array;
 // }
+
+import 'core-js/es/typed-array/uint16-array';
 
 // interface Int32Array {
 //     [Symbol.iterator](): IterableIterator<number>;
@@ -422,6 +435,8 @@ import 'core-js/es/typed-array/values';
 //     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Int32Array;
 // }
 
+import 'core-js/es/typed-array/int32-array';
+
 // interface Uint32Array {
 //     [Symbol.iterator](): IterableIterator<number>;
 //     /**
@@ -449,6 +464,8 @@ import 'core-js/es/typed-array/values';
 //      */
 //     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint32Array;
 // }
+
+import 'core-js/es/typed-array/uint32-array';
 
 // interface Float32Array {
 //     [Symbol.iterator](): IterableIterator<number>;
@@ -478,6 +495,8 @@ import 'core-js/es/typed-array/values';
 //     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Float32Array;
 // }
 
+import 'core-js/es/typed-array/float32-array';
+
 // interface Float64Array {
 //     [Symbol.iterator](): IterableIterator<number>;
 //     /**
@@ -506,3 +525,4 @@ import 'core-js/es/typed-array/values';
 //     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Float64Array;
 // }
 
+import 'core-js/es/typed-array/float64-array';

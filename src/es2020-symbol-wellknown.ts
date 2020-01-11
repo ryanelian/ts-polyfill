@@ -38,4 +38,4 @@
 //     [Symbol.matchAll](str: string): IterableIterator<RegExpMatchArray>;
 // }
 
-import './es2020-string';
+import 'core-js/es/string/match-all';
