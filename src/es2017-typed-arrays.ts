@@ -13,6 +13,10 @@
 // and limitations under the License.
 // ***************************************************************************** */
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
+// Here's the thing. Despite new TypedArray(param) is available in IE10, new TypedArray() might not. 
+// So need polyfill...
+// (Methods unique to ES2015 libraries are defined in es2015-core polyfills!)
 
 
 // /// <reference no-default-lib="true"/>
@@ -22,9 +26,6 @@
 //     new (): Int8Array;
 // }
 
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
-// Here's the deal. Despite new TypedArray(x) is available in IE10, new TypedArray() might not. 
-// So need polyfill...
 import 'core-js/es/typed-array/int8-array';
 
 // interface Uint8ArrayConstructor {

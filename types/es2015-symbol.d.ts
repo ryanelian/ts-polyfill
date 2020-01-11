@@ -1,0 +1,9 @@
+import 'core-js/es/object/to-string';
+import 'core-js/es/array/concat';
+import 'core-js/es/array/filter';
+import 'core-js/es/array/map';
+import 'core-js/es/array/slice';
+import 'core-js/es/array/splice';
+import 'core-js/modules/es.symbol';
+import 'core-js/es/symbol/for';
+import 'core-js/es/symbol/key-for';

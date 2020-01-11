@@ -18,25 +18,7 @@
     "declarationDir": "types",
 
     "lib": [
-      // "DOM",
-      // "DOM.Iterable",
-      "ES5",
-      "ES2015.Collection",
-      "ES2015.Core",
-      "ES2015.Iterable",
-      "ES2015.Promise",
-      "ES2015.Reflect",
-      "ES2016.Array.Include",
-      "ES2017.Object",
-      "ES2017.String",
-      "ES2017.TypedArrays",
-      "ES2018.AsyncIterable",
-      "ES2018.Promise",
-      "ES2019.Array",
-      "ES2019.Object",
-      "ES2019.String",
-      "ES2019.Symbol",
-      "ES2020.String"
+      "ES5"
     ]
   },
   "exclude": [
