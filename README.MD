@@ -89,7 +89,7 @@ Above version 0.0.4 (last known compatibility with TypeScript 2.8.3), we follow 
 
 **Release Cadence:** We will release new version if necessary whenever new TypeScript versions are published.
 
-## Which polyfill to include to use `downlevelIteration` when targeting ES5 in TypeScript?
+### Which polyfill to include to use `downlevelIteration` when targeting ES5 in TypeScript?
 
 - `es2015-symbol`
 - `es2015-symbol-wellknown`
