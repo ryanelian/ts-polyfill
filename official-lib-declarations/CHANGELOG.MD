@@ -2,6 +2,10 @@
 
 This document will be used to track TypeScript lib changes inbetween versions, for libs relevant to ts-polyfill.
 
+### 3.7.5
+
+> No changes.
+
 ### 3.7.3
 
 https://github.com/microsoft/TypeScript/releases/tag/v3.7-rc

@@ -111,7 +111,7 @@ Above version 0.0.4 (last known compatibility with TypeScript 2.8.3), we follow 
 
 ### What's the catch?
 
-- `es2015.core` [String.prototype.normalize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize) polyfill is **gigantic** (140 kb) and is not included.
+- `es2015.core` [String.prototype.normalize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize) polyfill is **GIGANTIC** (140 KB) and is not included.
 
     - **If you REALLY need it,** use polyfill provided by [unorm](https://github.com/walling/unorm) library.
 
