@@ -413,6 +413,17 @@ import 'core-js/es/object/is';
 
 import 'core-js/es/object/set-prototype-of';
 
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen
+//
+// Object.isFrozen(1);
+// // TypeError: 1 is not an object (ES5 code)
+//
+// Object.isFrozen(1);
+// // true                          (ES2015 code)
+
+import 'core-js/es/object/is-frozen'
+
 // interface ReadonlyArray<T> {
 //     /**
 //      * Returns the value of the first element in the array where predicate is true, and undefined
