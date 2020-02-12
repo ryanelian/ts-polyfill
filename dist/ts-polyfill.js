@@ -3213,6 +3213,19 @@ var tsPolyfill = (function () {
 
 	var setPrototypeOf = path.Object.setPrototypeOf;
 
+	var nativeIsFrozen = Object.isFrozen;
+	var FAILS_ON_PRIMITIVES = fails(function () { nativeIsFrozen(1); });
+
+	// `Object.isFrozen` method
+	// https://tc39.github.io/ecma262/#sec-object.isfrozen
+	_export({ target: 'Object', stat: true, forced: FAILS_ON_PRIMITIVES }, {
+	  isFrozen: function isFrozen(it) {
+	    return isObject(it) ? nativeIsFrozen ? nativeIsFrozen(it) : false : true;
+	  }
+	});
+
+	var isFrozen = path.Object.isFrozen;
+
 	// `RegExp.prototype.flags` getter implementation
 	// https://tc39.github.io/ecma262/#sec-get-regexp.prototype.flags
 	var regexpFlags = function () {

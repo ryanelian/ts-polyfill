@@ -41,6 +41,7 @@ import 'core-js/es/object/assign';
 import 'core-js/es/object/get-own-property-symbols';
 import 'core-js/es/object/is';
 import 'core-js/es/object/set-prototype-of';
+import 'core-js/es/object/is-frozen';
 import 'core-js/es/regexp/flags';
 import 'core-js/es/regexp/constructor';
 import 'core-js/es/string/code-point-at';
