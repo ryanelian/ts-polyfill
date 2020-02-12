@@ -33,6 +33,7 @@
       "ES2019.Object",
       "ES2019.String",
       "ES2019.Symbol",
+      "ES2020.Promise",
       "ES2020.String",
       "ES2020.Symbol.WellKnown"
     ]
@@ -40,7 +41,7 @@
 }
 ```
 
-> **[It's nearly 2020.](https://www.microsoft.com/en-us/windowsforbusiness/end-of-windows-7-support)** You should be targeting ES2015 or higher. [Yes, seriously. Insist to your manager / customers.](https://www.extremetech.com/internet/290872-the-new-microsoft-edge-browser-will-have-an-ie-mode)
+> It is 2020 and you should be targeting ES2015. [Internet Explorer 11 and Windows 7 are no longer supported by Microsoft and no longer receive security patches](https://support.microsoft.com/en-us/help/17621/internet-explorer-downloads).
 
 - Then, in the entry point of your application, import the polyfills.
 
@@ -57,6 +58,7 @@ import 'ts-polyfill/lib/es2019-array';
 import 'ts-polyfill/lib/es2019-object';
 import 'ts-polyfill/lib/es2019-string';
 import 'ts-polyfill/lib/es2019-symbol';
+import 'ts-polyfill/lib/es2020-promise';
 import 'ts-polyfill/lib/es2020-string';
 import 'ts-polyfill/lib/es2020-symbol-wellknown';
 
@@ -77,7 +79,7 @@ import 'ts-polyfill';
 
 - Include everything (also with exceptions listed above) using a pre-built script: download then include these as `<script>` in your HTML (before your app script):
 
-  - [ts-polyfill.min.js](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js) (51.62 KB, 18.32 KB gzip)
+  - [ts-polyfill.min.js](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js) (51.85 KB, 18.37 KB gzip)
 
   - [ts-polyfill.min.js.map](https://github.com/ryanelian/ts-polyfill/raw/master/dist/ts-polyfill.min.js.map) 
 
@@ -111,9 +113,11 @@ Above version 0.0.4 (last known compatibility with TypeScript 2.8.3), we follow 
 
 ### What's the catch?
 
-- `es2015.core` [String.prototype.normalize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize) polyfill is **GIGANTIC** (140 KB) and is not included.
+- `ES2015.Core` [String.prototype.normalize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize) polyfill is **GIGANTIC** (140 KB) and is not included.
 
-    - **If you REALLY need it,** use polyfill provided by [unorm](https://github.com/walling/unorm) library.
+  - **If you REALLY need it,** use polyfill provided by [unorm](https://github.com/walling/unorm) library.
+
+- `ES2020.BigInt` lib is not included in this library. It can probably be polyfilled using a separate library which is Google's official BigInt implementation: https://github.com/GoogleChromeLabs/jsbi
 
 - ES2015 Reflect polyfills are best-effort. (15/20)
 

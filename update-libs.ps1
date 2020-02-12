@@ -33,5 +33,7 @@ Copy-Item .\node_modules\typescript\lib\lib.es2019.string.d.ts -Destination .\of
 Copy-Item .\node_modules\typescript\lib\lib.es2019.symbol.d.ts -Destination .\official-lib-declarations\lib.es2019.symbol.d.ts
 Copy-Item .\node_modules\typescript\lib\lib.es2019.object.d.ts -Destination .\official-lib-declarations\lib.es2019.object.d.ts
 
+Copy-Item .\node_modules\typescript\lib\lib.es2020.bigint.d.ts -Destination .\official-lib-declarations\lib.es2020.bigint.d.ts
+Copy-Item .\node_modules\typescript\lib\lib.es2020.promise.d.ts -Destination .\official-lib-declarations\lib.es2020.promise.d.ts
 Copy-Item .\node_modules\typescript\lib\lib.es2020.string.d.ts -Destination .\official-lib-declarations\lib.es2020.string.d.ts
 Copy-Item .\node_modules\typescript\lib\lib.es2020.symbol.wellknown.d.ts -Destination .\official-lib-declarations\lib.es2020.symbol.wellknown.d.ts

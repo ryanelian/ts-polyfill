@@ -4716,6 +4716,15 @@ var tsPolyfill = (function () {
 
 	unwrapExports(es2019String);
 
+	var Promise$1 = path.Promise;
+	var $allSettled = Promise$1.allSettled;
+
+	var es2020Promise = createCommonjsModule(function (module, exports) {
+	Object.defineProperty(exports, "__esModule", { value: true });
+	});
+
+	unwrapExports(es2020Promise);
+
 	// `globalThis` object
 	// https://github.com/tc39/proposal-global
 	_export({ global: true }, {

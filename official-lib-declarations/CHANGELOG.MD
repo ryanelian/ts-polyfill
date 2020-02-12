@@ -2,6 +2,18 @@
 
 This document will be used to track TypeScript lib changes inbetween versions, for libs relevant to ts-polyfill.
 
+### 3.8.1-rc
+
+https://github.com/microsoft/TypeScript/releases/tag/v3.8-rc
+
+- Many, many updates to `lib.dom`
+
+- ES2019.Symbol lib: `Symbol.description` type changed to `string | undefined`
+
+- New libs added: ES2020.BigInt (not polyfilled) and ES2020.Promise (polyfilled)
+
+- Added polyfill for wrongly typed ES2015.Core lib method: `Object.isFrozen` in ES5 has different behavior to ES2015+ https://github.com/ryanelian/ts-polyfill/pull/10
+
 ### 3.7.5
 
 > No changes.
