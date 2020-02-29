@@ -2,9 +2,15 @@
 
 This document will be used to track TypeScript lib changes inbetween versions, for libs relevant to ts-polyfill.
 
+### 3.8.3
+
+https://github.com/microsoft/TypeScript/releases/tag/v3.8.3
+
+> No changes.
+
 ### 3.8.2
 
-https://devblogs.microsoft.com/typescript/announcing-typescript-3-8/
+https://github.com/microsoft/TypeScript/releases/tag/v3.8.2
 
 > No changes.
 
