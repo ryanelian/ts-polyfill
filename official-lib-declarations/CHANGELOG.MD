@@ -2,6 +2,24 @@
 
 This document will be used to track TypeScript lib changes inbetween versions, for libs relevant to ts-polyfill.
 
+### 3.9.3
+
+https://github.com/microsoft/TypeScript/releases/tag/v3.9.3
+
+- DOM and DOM iterable have many, many changes
+
+- ES2015.Core `isFinite` allows passing `unknown` value now
+
+- Minor fixes to Promise polyfills
+
+- Symbol Wellknown fixed `Uint8Array` string
+
+- ES2018.Intl has more fields
+
+- ES2019 Array has `FlatArray` interface
+
+- ES2020 BigInt has `valueOf` in Array now
+
 ### 3.8.3
 
 https://github.com/microsoft/TypeScript/releases/tag/v3.8.3

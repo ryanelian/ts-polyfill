@@ -7,8 +7,18 @@ var tsPolyfill = (function () {
 		return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
 	}
 
-	function createCommonjsModule(fn, module) {
-		return module = { exports: {} }, fn(module, module.exports), module.exports;
+	function createCommonjsModule(fn, basedir, module) {
+		return module = {
+		  path: basedir,
+		  exports: {},
+		  require: function (path, base) {
+	      return commonjsRequire(path, (base === undefined || base === null) ? module.path : base);
+	    }
+		}, fn(module, module.exports), module.exports;
+	}
+
+	function commonjsRequire () {
+		throw new Error('Dynamic requires are not currently supported by @rollup/plugin-commonjs');
 	}
 
 	var check = function (it) {
@@ -218,7 +228,7 @@ var tsPolyfill = (function () {
 	(module.exports = function (key, value) {
 	  return sharedStore[key] || (sharedStore[key] = value !== undefined ? value : {});
 	})('versions', []).push({
-	  version: '3.6.4',
+	  version: '3.6.5',
 	  mode:  'global',
 	  copyright: '© 2020 Denis Pushkarev (zloirock.ru)'
 	});
@@ -3773,7 +3783,13 @@ var tsPolyfill = (function () {
 	    defer = functionBindContext(port.postMessage, port, 1);
 	  // Browsers with postMessage, skip WebWorkers
 	  // IE8 has postMessage, but it's sync & typeof its postMessage is 'object'
-	  } else if (global_1.addEventListener && typeof postMessage == 'function' && !global_1.importScripts && !fails(post)) {
+	  } else if (
+	    global_1.addEventListener &&
+	    typeof postMessage == 'function' &&
+	    !global_1.importScripts &&
+	    !fails(post) &&
+	    location.protocol !== 'file:'
+	  ) {
 	    defer = post;
 	    global_1.addEventListener('message', listener, false);
 	  // IE8-
